@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-20"/>
+  <activeNode nodeId="node-38"/>
   <item nodeId="node-1">
     <command xml:space="preserve">Text Only Jam</command>
     <result xml:space="preserve">Text Only Jam&#x000A;TODO Headline by Joshua McLean&#x000A;Release 3 / Serial number 191216 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Start&#x000A;&#x000A;&gt;</result>
@@ -14,6 +14,7 @@
       <child nodeId="node-5"/>
       <child nodeId="node-10"/>
       <child nodeId="node-14"/>
+      <child nodeId="node-23"/>
     </children>
   </item>
   <item nodeId="node-2">
@@ -141,7 +142,7 @@
   </item>
   <item nodeId="node-14">
     <command xml:space="preserve">think about me</command>
-    <result xml:space="preserve">&gt;</result>
+    <result xml:space="preserve">You're pretty cool.&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
@@ -150,6 +151,7 @@
       <child nodeId="node-15"/>
       <child nodeId="node-17"/>
       <child nodeId="node-20"/>
+      <child nodeId="node-21"/>
     </children>
   </item>
   <item nodeId="node-15">
@@ -203,6 +205,196 @@
   </item>
   <item nodeId="node-20">
     <command xml:space="preserve">ponder about me</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-21">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Start&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-22"/>
+    </children>
+  </item>
+  <item nodeId="node-22">
+    <command xml:space="preserve">x me</command>
+    <result xml:space="preserve">As good-looking as ever.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-23">
+    <command xml:space="preserve">think about xyzzy</command>
+    <result xml:space="preserve">It's a magic word that does magical things.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-24"/>
+      <child nodeId="node-38"/>
+    </children>
+  </item>
+  <item nodeId="node-24">
+    <command xml:space="preserve">actions</command>
+    <result xml:space="preserve">Actions listing on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-25"/>
+    </children>
+  </item>
+  <item nodeId="node-25">
+    <command xml:space="preserve">think about xyzzy</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-26"/>
+    </children>
+  </item>
+  <item nodeId="node-26">
+    <command xml:space="preserve">rules</command>
+    <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-27"/>
+    </children>
+  </item>
+  <item nodeId="node-27">
+    <command xml:space="preserve">think about xyzzy</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-28"/>
+    </children>
+  </item>
+  <item nodeId="node-28">
+    <command xml:space="preserve">rules all</command>
+    <result xml:space="preserve">[Rule "declare everything initially unmentioned rule" applies.]&#x000A;Rules tracing now switched to "all". Type "rules off" to switch it off again.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-29"/>
+    </children>
+  </item>
+  <item nodeId="node-29">
+    <command xml:space="preserve">think about xyzzy</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-30"/>
+    </children>
+  </item>
+  <item nodeId="node-30">
+    <command xml:space="preserve">x me</command>
+    <result xml:space="preserve">[Rule "declare everything initially unmentioned rule" applies.]&#x000A;[examining yourself]&#x000A;[Rule "announce items from multiple object lists rule" applies.]&#x000A;[Rule "set pronouns from items from multiple object lists rule" applies.]&#x000A;[Rule "before stage rule" applies.]&#x000A;[Rule "giving orders needs an interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "Before doing something to a secret door which is unrevealed" does not apply (wrong action).]&#x000A;[Rule "Before doing something to a secret switch which is unrevealed" does not apply (wrong action).]&#x000A;[Rule "can't converse with absent interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "greet a new interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "implicit-conversing needs current interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "Before doing something when a secret door is the second noun and the second noun is unrevealed" does not apply (wrong action).]&#x000A;[Rule "Before doing something when a secret switch is the second noun and the second noun is unrevealed" does not apply (wrong action).]&#x000A;[Rule "can't act in the dark rule" applies.]&#x000A;[Rule "keychain-aware carrying requirements rule" applies.]&#x000A;[Rule "instead stage rule" applies.]&#x000A;[Rule "investigate player's awareness before action rule" applies.]&#x000A;[Rule "player aware of his own actions rule" applies.]&#x000A;[Rule "check stage rule" applies.]&#x000A;[Rule "carry out stage rule" applies.]&#x000A;[Rule "mark items as seen on examining rule" applies.]&#x000A;[Rule "standard examining rule" applies.]&#x000A;As good-looking as ever.&#x000A;&#x000A;[Rule "examine directions rule" applies.]&#x000A;[Rule "examine containers rule" applies.]&#x000A;[Rule "examine supporters rule" applies.]&#x000A;[Rule "examine devices rule" applies.]&#x000A;[Rule "examine undescribed things rule" applies.]&#x000A;[Rule "after stage rule" applies.]&#x000A;[Rule "passkey description rule" does not apply (wrong action).]&#x000A;[Rule "notepad output rule" does not apply (wrong action).]&#x000A;[Rule "investigate player's awareness after action rule" applies.]&#x000A;[Rule "report stage rule" applies.]&#x000A;[Rule "describe drawered objects rule" does not apply (wrong action).]&#x000A;[Rule "report other people examining rule" applies.]&#x000A;[Rule "last specific action-processing rule" applies.]&#x000A;[examining yourself - succeeded]&#x000A;&#x000A;[Rule "A first turn sequence rule" applies.]&#x000A;[Rule "every turn stage rule" applies.]&#x000A;[Rule "Every turn" applies.]&#x000A;[Rule "reset protocol rule" applies.]&#x000A;[Rule "A last turn sequence rule" applies.]&#x000A;[Rule "notify score changes rule" applies.]&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-31"/>
+    </children>
+  </item>
+  <item nodeId="node-31">
+    <command xml:space="preserve">think about me</command>
+    <result xml:space="preserve">[Rule "declare everything initially unmentioned rule" applies.]&#x000A;[pondering about yourself]&#x000A;[Rule "announce items from multiple object lists rule" applies.]&#x000A;[Rule "set pronouns from items from multiple object lists rule" applies.]&#x000A;[Rule "before stage rule" applies.]&#x000A;[Rule "giving orders needs an interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "Before doing something to a secret door which is unrevealed" does not apply (wrong action).]&#x000A;[Rule "Before doing something to a secret switch which is unrevealed" does not apply (wrong action).]&#x000A;[Rule "can't converse with absent interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "greet a new interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "implicit-conversing needs current interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "Before doing something when a secret door is the second noun and the second noun is unrevealed" does not apply (wrong action).]&#x000A;[Rule "Before doing something when a secret switch is the second noun and the second noun is unrevealed" does not apply (wrong action).]&#x000A;[Rule "keychain-aware carrying requirements rule" applies.]&#x000A;[Rule "instead stage rule" applies.]&#x000A;[Rule "investigate player's awareness before action rule" applies.]&#x000A;[Rule "player aware of his own actions rule" applies.]&#x000A;[Rule "check stage rule" applies.]&#x000A;[Rule "carry out stage rule" applies.]&#x000A;[Rule "after stage rule" applies.]&#x000A;[Rule "investigate player's awareness after action rule" applies.]&#x000A;[Rule "report stage rule" applies.]&#x000A;[Rule "Report pondering about" applies.]&#x000A;You're pretty cool.&#x000A;[Rule "last specific action-processing rule" applies.]&#x000A;[pondering about yourself - succeeded]&#x000A;&#x000A;[Rule "A first turn sequence rule" applies.]&#x000A;[Rule "every turn stage rule" applies.]&#x000A;[Rule "Every turn" applies.]&#x000A;[Rule "reset protocol rule" applies.]&#x000A;[Rule "A last turn sequence rule" applies.]&#x000A;[Rule "notify score changes rule" applies.]&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-32"/>
+    </children>
+  </item>
+  <item nodeId="node-32">
+    <command xml:space="preserve">think about xyzzy</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-33"/>
+    </children>
+  </item>
+  <item nodeId="node-33">
+    <command xml:space="preserve">think abou tit</command>
+    <result xml:space="preserve">I only understood you as far as wanting to think.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-34"/>
+    </children>
+  </item>
+  <item nodeId="node-34">
+    <command xml:space="preserve">think about it</command>
+    <result xml:space="preserve">I'm not sure what 'it' refers to.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-35"/>
+    </children>
+  </item>
+  <item nodeId="node-35">
+    <command xml:space="preserve">think about xyzzy</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-36"/>
+    </children>
+  </item>
+  <item nodeId="node-36">
+    <command xml:space="preserve">think about m</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-37"/>
+    </children>
+  </item>
+  <item nodeId="node-37">
+    <command xml:space="preserve">think about me</command>
+    <result xml:space="preserve">[Rule "declare everything initially unmentioned rule" applies.]&#x000A;[pondering about yourself]&#x000A;[Rule "announce items from multiple object lists rule" applies.]&#x000A;[Rule "set pronouns from items from multiple object lists rule" applies.]&#x000A;[Rule "before stage rule" applies.]&#x000A;[Rule "giving orders needs an interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "Before doing something to a secret door which is unrevealed" does not apply (wrong action).]&#x000A;[Rule "Before doing something to a secret switch which is unrevealed" does not apply (wrong action).]&#x000A;[Rule "can't converse with absent interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "greet a new interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "implicit-conversing needs current interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "Before doing something when a secret door is the second noun and the second noun is unrevealed" does not apply (wrong action).]&#x000A;[Rule "Before doing something when a secret switch is the second noun and the second noun is unrevealed" does not apply (wrong action).]&#x000A;[Rule "keychain-aware carrying requirements rule" applies.]&#x000A;[Rule "instead stage rule" applies.]&#x000A;[Rule "investigate player's awareness before action rule" applies.]&#x000A;[Rule "player aware of his own actions rule" applies.]&#x000A;[Rule "check stage rule" applies.]&#x000A;[Rule "carry out stage rule" applies.]&#x000A;[Rule "after stage rule" applies.]&#x000A;[Rule "investigate player's awareness after action rule" applies.]&#x000A;[Rule "report stage rule" applies.]&#x000A;[Rule "Report pondering about" applies.]&#x000A;You're pretty cool.&#x000A;[Rule "last specific action-processing rule" applies.]&#x000A;[pondering about yourself - succeeded]&#x000A;&#x000A;[Rule "A first turn sequence rule" applies.]&#x000A;[Rule "every turn stage rule" applies.]&#x000A;[Rule "Every turn" applies.]&#x000A;[Rule "reset protocol rule" applies.]&#x000A;[Rule "A last turn sequence rule" applies.]&#x000A;[Rule "notify score changes rule" applies.]&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-38">
+    <command xml:space="preserve">think about me</command>
     <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>

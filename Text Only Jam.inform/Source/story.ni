@@ -198,9 +198,18 @@ Carry out thinking: try pondering.
 Report pondering:
 	say "You stop and think for a moment, but nothing specific comes to mind. Maybe you need a HINT."
 
-Pondering about is an action applying to one thing. Understand "ponder about [something]" and "think about [something]" as pondering about.
+Pondering about is an action applying to one topic. Understand "ponder about [text]" and "think about [text]" as pondering about.
+
+Instead of pondering about a topic listed in the Table of Memories:
+	say "[thought entry][line break]".
+
 Report pondering about:
-	say "You don't recall anything important about [the noun]."
+	say "You don't recall anything important about that."
+
+Table of Memories
+topic	thought
+"me"	"You're pretty cool."
+"xyzzy"	"It's a magic word that does magical things."
 
 Chapter - The Magic Word
 
