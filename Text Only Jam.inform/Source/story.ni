@@ -196,20 +196,33 @@ The block thinking rule is not listed in any rulebook.
 Pondering is an action applying to nothing. Understand "ponder" and "think" as pondering.
 Carry out thinking: try pondering.
 Report pondering:
-	say "You stop and think for a moment, but nothing specific comes to mind. Maybe you need a HINT."
+	say "You stop and think for a moment, but nothing specific comes to mind. Maybe you need a HINT or to PONDER ABOUT something."
 
-Pondering about is an action applying to one topic. Understand "ponder about [text]" and "think about [text]" as pondering about.
+Thinking about is an action applying to one thing. Understand "ponder [any thing]" and "think about [any thing]" as thinking about.
 
-Instead of pondering about a topic listed in the Table of Memories:
-	say "[thought entry][line break]".
+Pondering about is an action applying to one topic. Understand "ponder [text]" and "think about [text]" as pondering about.
+
+[Instead of pondering about a topic listed in the Table of Memories:
+	say "[thought entry][line break]".]
+
+Report thinking about something unknown:
+	say "[no thought]".
+
+Report thinking about something known:
+	if the thought of the noun is "", say "[no thought]";
+	otherwise say "[thought of the noun][paragraph break]".
 
 Report pondering about:
-	say "You don't recall anything important about that."
+	say "[no thought]".
+	
+To say no thought:
+	say "You don't know anything about that."
 
-Table of Memories
-topic	thought
-"me"	"You're pretty cool."
-"xyzzy"	"It's a magic word that does magical things."
+A thing has some text called the thought.
+
+Xyzzy is a subject. Xyzzy is familiar. Understand "magic word" as xyzzy. The thought is "A magic word, but what could it mean?"
+
+The thought of the player is "You're pretty cool."
 
 Chapter - The Magic Word
 
@@ -339,7 +352,7 @@ Volume - Locations
 
 Book - Main
 
-Start is a room.
+Start is a room. A thing called crap is here. The thought is "It's pretty stinky."
 
 Volume - Characters
 
