@@ -57,6 +57,8 @@ Include Reversed Persuasion Correction by Juhana Leinonen.
 
 Volume - Preliminaries
 
+The time of day is 1:19 PM.
+
 [more entertaining than "never"]
 To decide whether pigs fly: no.
 
@@ -142,7 +144,9 @@ Please put an asterisk * before commands which you mean to be notes. For example
 
 Please mail the transcript file to joshua.mclean@8bitstoinfinity.com. I really appreciate the help. Every transcript will help make the game better!"
 
-Book - Simulation
+Book - New Actions, Kinds, Proprties, Relations
+
+Part - Meta
 
 The block attacking rule is not listed in the check attacking rulebook.
 Instead of attacking the player, say "Surely there is still hope!"
@@ -155,26 +159,17 @@ The bulk of a thing is usually 5. The bulk capacity of the player is 20.
 [Don't show doors in room descriptions.]
 A door is usually scenery.
 
-Part - Worn Objects Have Zero Bulk
+Chapter - Numbers
+
+Divisibility relates a number (called N) to a number (called M) when the remainder after dividing M by N is 0. The verb to divide means the divisibility relation. The verb to be a factor of means the divisibility relation.
+
+Chapter - Worn Objects Have Zero Bulk
 
 [don't count worn objects against the bulk held]
 To decide what number is the free capacity of (targetperson - a person): 
 	let sum be the total bulk of the things carried by targetperson which are not worn; 
 	now sum is the bulk capacity of the targetperson minus sum;  
 	decide on the sum.
-
-Part - Time
-
-[TODO time of day start]
-The time of day is 1:19 PM.
-
-Book - New Actions, Kinds, Proprties, Relations
-
-Part - Meta
-
-Chapter - Numbers
-
-Divisibility relates a number (called N) to a number (called M) when the remainder after dividing M by N is 0. The verb to divide means the divisibility relation. The verb to be a factor of means the divisibility relation.
 
 Chapter - New Responses to Default Actions
 
@@ -217,15 +212,20 @@ To say no thought:
 
 A thing has some text called the thought.
 
-Xyzzy is a subject. Xyzzy is familiar. Understand "magic word" as xyzzy. The thought is "A magic word, but what could it mean?"
-
-The thought of the player is "You're pretty cool."
+To add thought (addend - text) to (target - thing):
+	if the thought of the target is "":
+		now the thought of the target is addend;
+	otherwise:
+		let current-text be the thought of the target;
+		now the thought of the target is "[current-text] [addend]".
 
 Chapter - The Magic Word
 
 Xyzzying is an action applying to nothing. Understand "xyzzy" as xyzzying.
 Report xyzzying:
 	say "You recite the magic word, but nothing happens!"
+	
+Xyzzy is a subject. Xyzzy is familiar. Understand "magic word" as xyzzy. The thought is "A magic word, but what could it mean?"
 
 Chapter - Importance
 
@@ -366,6 +366,8 @@ Book - Player (Fen) the Noble Fighter Leader
 
 The player is a person called Fen. They are in the tunnel.
 
+The thought of the player is "You're pretty cool."
+
 Book - Saffi the Ignored Cleric Searching for Truth
 
 A woman called Saffi is in the tunnel. The unknown-name is "an armored woman with flowing purple hair". Understand "woman" and "armored woman" as Saffi.
@@ -384,13 +386,6 @@ After quizzing Saffi about Rale:
 	add thought "She doesn't like Rale." to Saffi.
 
 After saying goodbye to Saffi, say "Saffi waves."
-
-To add thought (addend - text) to (target - thing):
-	if the thought of the target is "":
-		now the thought of the target is addend;
-	otherwise:
-		let current-text be the thought of the target;
-		now the thought of the target is "[current-text] [addend]".
 
 Book - Rale the Smart, Posturing Ranger
 
