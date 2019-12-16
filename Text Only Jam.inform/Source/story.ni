@@ -107,7 +107,7 @@ When play begins:
 
 Table of Basic Help Options (continued)
 title	description
-"Additional commands"	"HINT will give you a hint menu, which should help if you're stuck.
+"Additional commands"	"Stuck? Try THINK or THINK ABOUT (something) to review what you've learned so far. Also, HINT will give you a menu of hints.
 
 UNDO is enabled in this game because I'm a nice person. But be careful about overusing it. That's a good way to break the game. :(
 
@@ -196,8 +196,12 @@ The block thinking rule is not listed in any rulebook.
 Pondering is an action applying to nothing. Understand "ponder" and "think" as pondering.
 Carry out thinking: try pondering.
 Report pondering:
-	say "I stop and think for a moment. Maybe I need a HINT."
-	
+	say "You stop and think for a moment, but nothing specific comes to mind. Maybe you need a HINT."
+
+Pondering about is an action applying to one thing. Understand "ponder about [something]" and "think about [something]" as pondering about.
+Report pondering about:
+	say "You don't recall anything important about [the noun]."
+
 Chapter - The Magic Word
 
 Xyzzying is an action applying to nothing. Understand "xyzzy" as xyzzying.
