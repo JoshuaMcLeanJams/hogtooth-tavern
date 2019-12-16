@@ -8,20 +8,20 @@ Include Introductions by Emily Short.]
 [Include Variable Time Control by Eric Eve.]
 [Include After Not Doing Something by Ron Newcomb.]
 
-Include Locksmith by Emily Short.
-Include Skeleton Keys by Emily Short.
-Include Automated Drawers by Emily Short.
-Include Basic Help Menu by Emily Short.
-Include Postures by Emily Short.
-Include Simple Followers by Emily Short.
-Include Epistemology by Eric Eve.
-Include Conversation Framework by Eric Eve.
 Include Adaptive Hints by Eric Eve.
+[Include Automated Drawers by Emily Short.]
+Include Basic Help Menu by Emily Short.
 Include Bulk Limiter by Eric Eve.
-Include Exit Lister by Eric Eve.
-Include Hiding Under by Eric Eve.
-Include Secret Doors by Gavin Lambert.
-Include Notepad by Jim Aikin.
+Include Conversation Framework by Eric Eve.
+Include Epistemology by Eric Eve.
+[Include Exit Lister by Eric Eve.]
+[Include Hiding Under by Eric Eve.]
+[Include Locksmith by Emily Short.]
+[Include Notepad by Jim Aikin.]
+Include Postures by Emily Short.
+[Include Secret Doors by Gavin Lambert.]
+Include Simple Followers by Emily Short.
+[Include Skeleton Keys by Emily Short.]
 
 [broken]
 [Include Remembering by Aaron Reed.]
@@ -107,19 +107,19 @@ When play begins:
 
 Table of Basic Help Options (continued)
 title	description
-"Additional commands"	"Stuck? Try THINK or THINK ABOUT (something) to review what you've learned so far. Also, HINT will give you a menu of hints.
+"Additional commands"	"Conversation and remembrance are two key parts of this adventure.
+
+You can TALK TO (person) to initiate conversation, then ASK ABOUT (something). A shortcut is to ASK (person) ABOUT (something) which will initiate conversation and ask about the topic.
+
+You can also TELL (something) or shorthand TELL (person) ABOUT (something) to inform other characters about people, places, or things.
+
+Stuck? Try a plain THINK or PONDER for a general review what you've learned so far. Also, HINT will give you a menu of hints.
 
 UNDO is enabled in this game because I'm a nice person. But be careful about overusing it. That's a good way to break the game. :(
 
 If you have parchment and a pen, you can WRITE (message) ON PARCHMENT. Whenever you write a message, it overwrites the previous message. You can READ PARCHMENT to see the text and ERASE PARCHMENT to clear all text in it. If you're worried about overwriting the information in the notebook, use PROTECT PARCHMENT and the game will stop you from changing the text. Use UNPROTECT PARCHMENT if you want to edit it again.
 
 You can EMPTY a container which drops everything in it onto the floor--including things you can't normally remove like liquids.
-
-Using items in various situations may require you to WIELD the item first.
-
-If there are multiple ways down from a place, you must DESCEND a specific object.
-
-You can TALK TO (person) or ASK (person) ABOUT (something). You can also SAY HELLO TO (person) or SAY GOODBYE TO (person) to begin or end a conversation with them. Finally, you can TELL (person) ABOUT (something). **Note: No one has anything to say in the current version.
 
 Check your SCORE to see how many points you've found. Some of these are secrets!"
 "Contact the author"	"If you find any bugs, typos, weird responess, or simply want to comment on the game, please contact me. Please include a transcript with your email if you have one. I appreciate your help!
@@ -202,9 +202,6 @@ Thinking about is an action applying to one thing. Understand "ponder [any thing
 
 Pondering about is an action applying to one topic. Understand "ponder [text]" and "think about [text]" as pondering about.
 
-[Instead of pondering about a topic listed in the Table of Memories:
-	say "[thought entry][line break]".]
-
 Report thinking about something unknown:
 	say "[no thought]".
 
@@ -216,7 +213,7 @@ Report pondering about:
 	say "[no thought]".
 	
 To say no thought:
-	say "You don't know anything about that."
+	say "No specific memories come to mind."
 
 A thing has some text called the thought.
 
@@ -258,9 +255,9 @@ Carry out waking:
 Report waking:
 	say "[The noun] awakens."
 	
-Chapter - Reading
+[Chapter - Reading
 
-A thing can be read. A thing is usually not read. After reading something: now the noun is read.
+A thing can be read. A thing is usually not read. After reading something: now the noun is read.]
 
 Chapter - Weapons
 
@@ -343,18 +340,65 @@ title	subtable
 "How do I do a thing?"	Table of Temporary Hints
 
 Table of Temporary Hints
-hint									used
+hint			used
 "Hints go here."
 "We can have a few."
 "They're awesome."
 
 Volume - Locations
 
+A person can be introduced. A person is usually not introduced.
+
+A person has text called the unknown-name. The unknown-name is usually "a person".
+
+[The printed name of a person (called the target) is usually "[if the target is introduced][the name of the target][otherwise][the unknown-name of the target]."]
+
+Rule for printing the name of a person who is not introduced (called the target):
+	say "[the unknown-name of the target]".
+
 Book - Main
 
-Start is a room. A thing called crap is here. The thought is "It's pretty stinky."
+The Tunnel is a room.
 
 Volume - Characters
+
+Book - Player (Fen) the Noble Fighter Leader
+
+The player is a person called Fen. They are in the tunnel.
+
+Book - Saffi the Ignored Cleric Searching for Truth
+
+A woman called Saffi is in the tunnel. The unknown-name is "an armored woman with flowing purple hair". Understand "woman" and "armored woman" as Saffi.
+
+After saying hello to Saffi, say "'Hey,' she says. [run paragraph on]"
+
+After quizzing Saffi about the player, say "'You're okay. That's good.'"
+
+After quizzing Saffi about Saffi:
+	say "'Oh, I'm Saffi. That's all I remember. And something about... a dragon?'";
+	now Saffi is introduced;
+	add thought "An armored woman with flowing, purple hair." to Saffi.
+	
+After quizzing Saffi about Rale:
+	say "'He rubs me the wrong way. Not sure why.'";
+	add thought "She doesn't like Rale." to Saffi.
+
+After saying goodbye to Saffi, say "Saffi waves."
+
+To add thought (addend - text) to (target - thing):
+	if the thought of the target is "":
+		now the thought of the target is addend;
+	otherwise:
+		let current-text be the thought of the target;
+		now the thought of the target is "[current-text] [addend]".
+
+Book - Rale the Smart, Posturing Ranger
+
+A man called Rale is in the tunnel. The unknown-name is "a short man with an enormous bow". Understand "man" and "short man" and "bowman" and "bow man" as Rale.
+
+Book - Tira the Self-Righteous Wizard
+
+A woman called Tira is in the tunnel. The unknown-name is "a tall woman in thin robes". Understand "woman" and "tall woman" and "robed woman" as Tira.
 
 Volume - Hint Management
 

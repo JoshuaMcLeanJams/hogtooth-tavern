@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-64"/>
+  <activeNode nodeId="node-151"/>
   <item nodeId="node-1">
     <command xml:space="preserve">Text Only Jam</command>
-    <result xml:space="preserve">Text Only Jam&#x000A;TODO Headline by Joshua McLean&#x000A;Release 3 / Serial number 191216 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Start&#x000A;You can see crap here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Text Only Jam&#x000A;TODO Headline by Joshua McLean&#x000A;Release 3 / Serial number 191216 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Tunnel&#x000A;You can see an armored woman with flowing purple hair, a short man with an enormous bow, and a tall woman in thin robes here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
@@ -13,11 +13,22 @@
       <child nodeId="node-41"/>
       <child nodeId="node-58"/>
       <child nodeId="node-62"/>
+      <child nodeId="node-81"/>
+      <child nodeId="node-82"/>
+      <child nodeId="node-92"/>
+      <child nodeId="node-93"/>
+      <child nodeId="node-99"/>
+      <child nodeId="node-104"/>
+      <child nodeId="node-107"/>
+      <child nodeId="node-108"/>
+      <child nodeId="node-115"/>
+      <child nodeId="node-118"/>
+      <child nodeId="node-122"/>
     </children>
   </item>
   <item nodeId="node-41">
     <command xml:space="preserve">think about crap</command>
-    <result xml:space="preserve">&gt;</result>
+    <result xml:space="preserve">It's pretty stinky.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>YES</changed>
@@ -142,6 +153,752 @@
   <item nodeId="node-64">
     <command xml:space="preserve">think about crap</command>
     <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-81">
+    <command xml:space="preserve">ponder saffi</command>
+    <result xml:space="preserve">You don't know anything about that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-82">
+    <command xml:space="preserve">hello saffi</command>
+    <result xml:space="preserve">You say hello to Saffi.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-83"/>
+    </children>
+  </item>
+  <item nodeId="node-83">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">You are already talking to Saffi.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-84"/>
+    </children>
+  </item>
+  <item nodeId="node-84">
+    <command xml:space="preserve">goodbye</command>
+    <result xml:space="preserve">You say goodbye to Saffi.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-85"/>
+    </children>
+  </item>
+  <item nodeId="node-85">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">(addressing Saffi)&#x000A;You say hello to Saffi.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-86"/>
+    </children>
+  </item>
+  <item nodeId="node-86">
+    <command xml:space="preserve">goodbye</command>
+    <result xml:space="preserve">You say goodbye to Saffi.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-87"/>
+    </children>
+  </item>
+  <item nodeId="node-87">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">(addressing Saffi)&#x000A;You say hello to Saffi.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-88"/>
+    </children>
+  </item>
+  <item nodeId="node-88">
+    <command xml:space="preserve">tunne</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-89"/>
+    </children>
+  </item>
+  <item nodeId="node-89">
+    <command xml:space="preserve">ask about tunnel</command>
+    <result xml:space="preserve">There is no reply.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-90"/>
+    </children>
+  </item>
+  <item nodeId="node-90">
+    <command xml:space="preserve">ask saffi about tunnel</command>
+    <result xml:space="preserve">There is no reply.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-91"/>
+    </children>
+  </item>
+  <item nodeId="node-91">
+    <command xml:space="preserve">ask me about me</command>
+    <result xml:space="preserve">Talking to yourself is likely to prove unrewarding.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-92">
+    <command xml:space="preserve">ask saffi about tunnel</command>
+    <result xml:space="preserve">"Hey," she says.There is no reply.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-93">
+    <command xml:space="preserve">ask saffi about me</command>
+    <result xml:space="preserve">"Hey," she says. "You're okay. That's good."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-94"/>
+      <child nodeId="node-96"/>
+    </children>
+  </item>
+  <item nodeId="node-94">
+    <command xml:space="preserve">ask about tunnel</command>
+    <result xml:space="preserve">There is no reply.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-95"/>
+    </children>
+  </item>
+  <item nodeId="node-95">
+    <command xml:space="preserve">bye</command>
+    <result xml:space="preserve">Saffi waves.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-96">
+    <command xml:space="preserve">ask saffi about me</command>
+    <result xml:space="preserve">"You're okay. That's good."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-97"/>
+    </children>
+  </item>
+  <item nodeId="node-97">
+    <command xml:space="preserve">ask saffi about me</command>
+    <result xml:space="preserve">"You're okay. That's good."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-98"/>
+    </children>
+  </item>
+  <item nodeId="node-98">
+    <command xml:space="preserve">ask saffi about me</command>
+    <result xml:space="preserve">"You're okay. That's good."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-99">
+    <command xml:space="preserve">ask woman about herself</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-100"/>
+    </children>
+  </item>
+  <item nodeId="node-100">
+    <command xml:space="preserve">ask woman</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-101"/>
+    </children>
+  </item>
+  <item nodeId="node-101">
+    <command xml:space="preserve">hello woman</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-102"/>
+    </children>
+  </item>
+  <item nodeId="node-102">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Tunnel&#x000A;Saffi is here.&#x000A;&#x000A;You can also see Rale and Tira here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-103"/>
+    </children>
+  </item>
+  <item nodeId="node-103">
+    <command xml:space="preserve">ask saffi about herself</command>
+    <result xml:space="preserve">"Hey," she says. "Oh, I'm Saffi. That's all I remember. And something about... a dragon?"&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-104">
+    <command xml:space="preserve">rules all</command>
+    <result xml:space="preserve">Rules tracing now switched to "all". Type "rules off" to switch it off again.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-105"/>
+    </children>
+  </item>
+  <item nodeId="node-105">
+    <command xml:space="preserve">x woman</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-106"/>
+    </children>
+  </item>
+  <item nodeId="node-106">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">[Rule "declare everything initially unmentioned rule" applies.]&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "announce items from multiple object lists rule" applies.]&#x000A;[Rule "set pronouns from items from multiple object lists rule" applies.]&#x000A;[Rule "before stage rule" applies.]&#x000A;[Rule "giving orders needs an interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "can't converse with absent interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "greet a new interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "implicit-conversing needs current interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "instead stage rule" applies.]&#x000A;[Rule "investigate player's awareness before action rule" applies.]&#x000A;[Rule "player aware of his own actions rule" applies.]&#x000A;[Rule "check stage rule" applies.]&#x000A;[Rule "carry out stage rule" applies.]&#x000A;[Rule "declare everything unmentioned rule" applies.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;Tunnel&#x000A;[Rule "room description body text rule" applies.]&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "initialise locale description rule" applies.]&#x000A;[Rule "find notable locale objects rule" applies.]&#x000A;[Rule "standard notable locale objects rule" applies.]&#x000A;[Rule "interesting locale paragraphs rule" applies.]&#x000A;[Rule "initial appearance on supporters rule" does not apply (wrong action).]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "describe what's on mentioned supporters in room descriptions rule" applies.]&#x000A;[Rule "initial appearance on supporters rule" does not apply (wrong action).]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;Saffi is here.&#x000A;&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "describe what's on mentioned supporters in room descriptions rule" applies.]&#x000A;[Rule "initial appearance on supporters rule" does not apply (wrong action).]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "describe what's on mentioned supporters in room descriptions rule" applies.]&#x000A;[Rule "initial appearance on supporters rule" does not apply (wrong action).]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "describe what's on mentioned supporters in room descriptions rule" applies.]&#x000A;[Rule "you-can-also-see rule" applies.]&#x000A;You can also see Rale and Tira here.&#x000A;&#x000A;[Rule "check new arrival rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "after stage rule" applies.]&#x000A;[Rule "investigate player's awareness after action rule" applies.]&#x000A;[Rule "report stage rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;[Rule "last specific action-processing rule" applies.]&#x000A;[Rule "A first turn sequence rule" applies.]&#x000A;[Rule "every turn stage rule" applies.]&#x000A;[Rule "reset protocol rule" applies.]&#x000A;[Rule "Every turn" applies.]&#x000A;[Rule "A last turn sequence rule" applies.]&#x000A;[Rule "notify score changes rule" applies.]&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-107">
+    <command xml:space="preserve">talk to woman</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-108">
+    <command xml:space="preserve">x woman</command>
+    <result xml:space="preserve">Who do you mean, an armored woman with flowing purple hair or a tall woman in thin robes?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-109"/>
+    </children>
+  </item>
+  <item nodeId="node-109">
+    <command xml:space="preserve">armored</command>
+    <result xml:space="preserve">You see nothing special about an armored woman with flowing purple hair.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-110"/>
+    </children>
+  </item>
+  <item nodeId="node-110">
+    <command xml:space="preserve">ask woman about hersef</command>
+    <result xml:space="preserve">Who do you mean, an armored woman with flowing purple hair or a tall woman in thin robes?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-111"/>
+    </children>
+  </item>
+  <item nodeId="node-111">
+    <command xml:space="preserve">ask woman about herself</command>
+    <result xml:space="preserve">Who do you mean, an armored woman with flowing purple hair or a tall woman in thin robes?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-112"/>
+    </children>
+  </item>
+  <item nodeId="node-112">
+    <command xml:space="preserve">armored</command>
+    <result xml:space="preserve">"Hey," she says. "Oh, I'm Saffi. That's all I remember. And something about... a dragon?"&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-113"/>
+    </children>
+  </item>
+  <item nodeId="node-113">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Tunnel&#x000A;You can see Saffi, a short man with an enormous bow, and a tall woman in thin robes here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-114"/>
+    </children>
+  </item>
+  <item nodeId="node-114">
+    <command xml:space="preserve">think about saffi</command>
+    <result xml:space="preserve">No specific memories come to mind.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-115">
+    <command xml:space="preserve">ask Saffi about Rale</command>
+    <result xml:space="preserve">"Hey," she says. "He rubs me the wrong way. Not sure why."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-116"/>
+    </children>
+  </item>
+  <item nodeId="node-116">
+    <command xml:space="preserve">ask saffi about herself</command>
+    <result xml:space="preserve">"Oh, I'm Saffi. That's all I remember. And something about... a dragon?"&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-117"/>
+    </children>
+  </item>
+  <item nodeId="node-117">
+    <command xml:space="preserve">think about saffi</command>
+    <result xml:space="preserve">An armored woman with flowing, purple hair.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-118">
+    <command xml:space="preserve">think about saffi</command>
+    <result xml:space="preserve">No specific memories come to mind.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-119"/>
+    </children>
+  </item>
+  <item nodeId="node-119">
+    <command xml:space="preserve">ask saffi about rale</command>
+    <result xml:space="preserve">"Hey," she says. "He rubs me the wrong way. Not sure why."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-120"/>
+    </children>
+  </item>
+  <item nodeId="node-120">
+    <command xml:space="preserve">ask about herself</command>
+    <result xml:space="preserve">"Oh, I'm Saffi. That's all I remember. And something about... a dragon?"&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-121"/>
+    </children>
+  </item>
+  <item nodeId="node-121">
+    <command xml:space="preserve">ponder saffi</command>
+    <result xml:space="preserve">She doesn't like Rale. An armored woman with flowing, purple hair.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-122">
+    <command xml:space="preserve">help</command>
+    <result xml:space="preserve">&gt; Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A;   Additional commands&#x000A;   Contact the author&#x000A;   Additional credits</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-123"/>
+    </children>
+  </item>
+  <item nodeId="node-123">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Originally developed for the 8 Bits to Infinity Text Only Jam from December 13-20, 2019, Bardolf's Curse is a location-based, puzzle-focused piece of interactive fiction--or, as the author prefers, a text adventure.&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-124"/>
+    </children>
+  </item>
+  <item nodeId="node-124">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">&gt; Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A;   Additional commands&#x000A;   Contact the author&#x000A;   Additional credits&#x000A;&#x000A; &gt; Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A;   Additional commands&#x000A;   Contact the author&#x000A;   Additional credits</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-125"/>
+    </children>
+  </item>
+  <item nodeId="node-125">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Introduction to Text Only Jam&#x000A; &gt; Instructions for Play&#x000A;   Additional commands&#x000A;   Contact the author&#x000A;   Additional credits&#x000A;&#x000A;   Introduction to Text Only Jam&#x000A; &gt; Instructions for Play&#x000A;   Additional commands&#x000A;   Contact the author&#x000A;   Additional credits</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-126"/>
+    </children>
+  </item>
+  <item nodeId="node-126">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">&gt; About Interactive Fiction&#x000A;   What to do with &gt;&#x000A;   Getting Started&#x000A;   Rooms and Travel&#x000A;   Objects&#x000A;   Controlling the Game&#x000A;   How the World is Assembled&#x000A;   If You Get Stuck</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-127"/>
+    </children>
+  </item>
+  <item nodeId="node-127">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">About Interactive Fiction&#x000A; &gt; What to do with &gt;&#x000A;   Getting Started&#x000A;   Rooms and Travel&#x000A;   Objects&#x000A;   Controlling the Game&#x000A;   How the World is Assembled&#x000A;   If You Get Stuck&#x000A;&#x000A;   About Interactive Fiction&#x000A; &gt; What to do with &gt;&#x000A;   Getting Started&#x000A;   Rooms and Travel&#x000A;   Objects&#x000A;   Controlling the Game&#x000A;   How the World is Assembled&#x000A;   If You Get Stuck</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-128"/>
+    </children>
+  </item>
+  <item nodeId="node-128">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">About Interactive Fiction&#x000A;   What to do with &gt;&#x000A; &gt; Getting Started&#x000A;   Rooms and Travel&#x000A;   Objects&#x000A;   Controlling the Game&#x000A;   How the World is Assembled&#x000A;   If You Get Stuck&#x000A;&#x000A;   About Interactive Fiction&#x000A;   What to do with &gt;&#x000A; &gt; Getting Started&#x000A;   Rooms and Travel&#x000A;   Objects&#x000A;   Controlling the Game&#x000A;   How the World is Assembled&#x000A;   If You Get Stuck</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-129"/>
+    </children>
+  </item>
+  <item nodeId="node-129">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">About Interactive Fiction&#x000A;   What to do with &gt;&#x000A;   Getting Started&#x000A; &gt; Rooms and Travel&#x000A;   Objects&#x000A;   Controlling the Game&#x000A;   How the World is Assembled&#x000A;   If You Get Stuck&#x000A;&#x000A;   About Interactive Fiction&#x000A;   What to do with &gt;&#x000A;   Getting Started&#x000A; &gt; Rooms and Travel&#x000A;   Objects&#x000A;   Controlling the Game&#x000A;   How the World is Assembled&#x000A;   If You Get Stuck</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-130"/>
+    </children>
+  </item>
+  <item nodeId="node-130">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">About Interactive Fiction&#x000A;   What to do with &gt;&#x000A;   Getting Started&#x000A;   Rooms and Travel&#x000A; &gt; Objects&#x000A;   Controlling the Game&#x000A;   How the World is Assembled&#x000A;   If You Get Stuck&#x000A;&#x000A;   About Interactive Fiction&#x000A;   What to do with &gt;&#x000A;   Getting Started&#x000A;   Rooms and Travel&#x000A; &gt; Objects&#x000A;   Controlling the Game&#x000A;   How the World is Assembled&#x000A;   If You Get Stuck</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-131"/>
+    </children>
+  </item>
+  <item nodeId="node-131">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">About Interactive Fiction&#x000A;   What to do with &gt;&#x000A;   Getting Started&#x000A;   Rooms and Travel&#x000A;   Objects&#x000A; &gt; Controlling the Game&#x000A;   How the World is Assembled&#x000A;   If You Get Stuck&#x000A;&#x000A;   About Interactive Fiction&#x000A;   What to do with &gt;&#x000A;   Getting Started&#x000A;   Rooms and Travel&#x000A;   Objects&#x000A; &gt; Controlling the Game&#x000A;   How the World is Assembled&#x000A;   If You Get Stuck</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-132"/>
+    </children>
+  </item>
+  <item nodeId="node-132">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">About Interactive Fiction&#x000A;   What to do with &gt;&#x000A;   Getting Started&#x000A;   Rooms and Travel&#x000A;   Objects&#x000A;   Controlling the Game&#x000A; &gt; How the World is Assembled&#x000A;   If You Get Stuck&#x000A;&#x000A;   About Interactive Fiction&#x000A;   What to do with &gt;&#x000A;   Getting Started&#x000A;   Rooms and Travel&#x000A;   Objects&#x000A;   Controlling the Game&#x000A; &gt; How the World is Assembled&#x000A;   If You Get Stuck</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-133"/>
+    </children>
+  </item>
+  <item nodeId="node-133">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">About Interactive Fiction&#x000A;   What to do with &gt;&#x000A;   Getting Started&#x000A;   Rooms and Travel&#x000A;   Objects&#x000A;   Controlling the Game&#x000A;   How the World is Assembled&#x000A; &gt; If You Get Stuck&#x000A;&#x000A;   About Interactive Fiction&#x000A;   What to do with &gt;&#x000A;   Getting Started&#x000A;   Rooms and Travel&#x000A;   Objects&#x000A;   Controlling the Game&#x000A;   How the World is Assembled&#x000A; &gt; If You Get Stuck</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-134"/>
+    </children>
+  </item>
+  <item nodeId="node-134">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">&gt; Explore&#x000A;   Read carefully&#x000A;   Be creative&#x000A;   Cooperate</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-135"/>
+    </children>
+  </item>
+  <item nodeId="node-135">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Explore&#x000A; &gt; Read carefully&#x000A;   Be creative&#x000A;   Cooperate&#x000A;&#x000A;   Explore&#x000A; &gt; Read carefully&#x000A;   Be creative&#x000A;   Cooperate</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-136"/>
+    </children>
+  </item>
+  <item nodeId="node-136">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Explore&#x000A;   Read carefully&#x000A; &gt; Be creative&#x000A;   Cooperate&#x000A;&#x000A;   Explore&#x000A;   Read carefully&#x000A; &gt; Be creative&#x000A;   Cooperate</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-137"/>
+    </children>
+  </item>
+  <item nodeId="node-137">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Explore&#x000A;   Read carefully&#x000A;   Be creative&#x000A; &gt; Cooperate&#x000A;&#x000A;   Explore&#x000A;   Read carefully&#x000A;   Be creative&#x000A; &gt; Cooperate</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-138"/>
+    </children>
+  </item>
+  <item nodeId="node-138">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Play with someone else. Two heads are often better than one. If that doesn't work, try emailing the author or (better yet) posting a request for hints on the newsgroup rec.games.int-fiction.  For best results, put the name of the game you want help with in the subject line; then leave a page or so of blank spoiler space (so that no one will read about where you got to in the game unless they've already played it), and describe your problem as clearly as possible.  Someone will probably be able to tell you how to get around it.&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-139"/>
+    </children>
+  </item>
+  <item nodeId="node-139">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">Explore&#x000A;   Read carefully&#x000A;   Be creative&#x000A; &gt; Cooperate&#x000A;&#x000A;   Explore&#x000A;   Read carefully&#x000A;   Be creative&#x000A; &gt; Cooperate</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-140"/>
+    </children>
+  </item>
+  <item nodeId="node-140">
+    <command xml:space="preserve">[esc]</command>
+    <result xml:space="preserve">About Interactive Fiction&#x000A;   What to do with &gt;&#x000A;   Getting Started&#x000A;   Rooms and Travel&#x000A;   Objects&#x000A;   Controlling the Game&#x000A;   How the World is Assembled&#x000A; &gt; If You Get Stuck</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-141"/>
+    </children>
+  </item>
+  <item nodeId="node-141">
+    <command xml:space="preserve">[esc]</command>
+    <result xml:space="preserve">Introduction to Text Only Jam&#x000A; &gt; Instructions for Play&#x000A;   Additional commands&#x000A;   Contact the author&#x000A;   Additional credits</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-142"/>
+    </children>
+  </item>
+  <item nodeId="node-142">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A; &gt; Additional commands&#x000A;   Contact the author&#x000A;   Additional credits&#x000A;&#x000A;   Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A; &gt; Additional commands&#x000A;   Contact the author&#x000A;   Additional credits</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-143"/>
+    </children>
+  </item>
+  <item nodeId="node-143">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Conversation and remembrance are two key parts of this adventure.&#x000A;&#x000A;You can TALK TO (person) to initiate conversation, then ASK ABOUT (something). A shortcut is to ASK (person) ABOUT (something) which will initiate conversation {i}and{/i} ask about the topic.&#x000A;&#x000A;You can also TELL (something) or shorthand TELL (person) ABOUT (something) to inform other characters about people, places, or things.&#x000A;&#x000A;Stuck? Try a plain THINK or PONDER for a general review what you've learned so far. Also, HINT will give you a menu of hints.&#x000A;&#x000A;UNDO is enabled in this game because I'm a nice person. But be careful about overusing it. That's a good way to break the game. :(&#x000A;&#x000A;If you have parchment and a pen, you can WRITE (message) ON PARCHMENT. Whenever you write a message, it overwrites the previous message. You can READ PARCHMENT to see the text and ERASE PARCHMENT to clear all text in it. If you're worried about overwriting the information in the notebook, use PROTECT PARCHMENT and the game will stop you from changing the text. Use UNPROTECT PARCHMENT if you want to edit it again.&#x000A;&#x000A;You can EMPTY a container which drops everything in it onto the floor--including things you can't normally remove like liquids.&#x000A;&#x000A;Check your SCORE to see how many points you've found. Some of these are secrets!&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-144"/>
+    </children>
+  </item>
+  <item nodeId="node-144">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A; &gt; Additional commands&#x000A;   Contact the author&#x000A;   Additional credits&#x000A;&#x000A;   Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A; &gt; Additional commands&#x000A;   Contact the author&#x000A;   Additional credits</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-145"/>
+    </children>
+  </item>
+  <item nodeId="node-145">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A;   Additional commands&#x000A; &gt; Contact the author&#x000A;   Additional credits&#x000A;&#x000A;   Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A;   Additional commands&#x000A; &gt; Contact the author&#x000A;   Additional credits</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-146"/>
+    </children>
+  </item>
+  <item nodeId="node-146">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">If you find any bugs, typos, weird responess, or simply want to comment on the game, please contact me. Please include a transcript with your email if you have one. I appreciate your help!&#x000A;&#x000A;E-mail:  joshua.mclean@8bitstoinfinity.com Twitter: @MrJoshuaMcLean Website: https://joshua-mclean.itch.io/&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-147"/>
+    </children>
+  </item>
+  <item nodeId="node-147">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A;   Additional commands&#x000A; &gt; Contact the author&#x000A;   Additional credits&#x000A;&#x000A;   Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A;   Additional commands&#x000A; &gt; Contact the author&#x000A;   Additional credits</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-148"/>
+    </children>
+  </item>
+  <item nodeId="node-148">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A;   Additional commands&#x000A;   Contact the author&#x000A; &gt; Additional credits&#x000A;&#x000A;   Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A;   Additional commands&#x000A;   Contact the author&#x000A; &gt; Additional credits</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-149"/>
+    </children>
+  </item>
+  <item nodeId="node-149">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">TO DO additional credits&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-150"/>
+    </children>
+  </item>
+  <item nodeId="node-150">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A;   Additional commands&#x000A;   Contact the author&#x000A; &gt; Additional credits&#x000A;&#x000A;   Introduction to Text Only Jam&#x000A;   Instructions for Play&#x000A;   Additional commands&#x000A;   Contact the author&#x000A; &gt; Additional credits</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-151"/>
+    </children>
+  </item>
+  <item nodeId="node-151">
+    <command xml:space="preserve">[esc]</command>
+    <result xml:space="preserve">Tunnel&#x000A;You can see an armored woman with flowing purple hair, a short man with an enormous bow, and a tall woman in thin robes here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
