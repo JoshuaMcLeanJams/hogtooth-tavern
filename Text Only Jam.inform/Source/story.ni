@@ -390,11 +390,11 @@ After saying goodbye to Saffi, say "Saffi waves."
 Book - Rale the Smart, Posturing Ranger
 
 A man called Rale is in the tunnel. The unknown-name is "a short man with an enormous bow". Understand "man" and "short man" and "bowman" and "bow man" as Rale.
-
+[
 Book - Tira the Self-Righteous Wizard
 
 A woman called Tira is in the tunnel. The unknown-name is "a tall woman in thin robes". Understand "woman" and "tall woman" and "robed woman" as Tira.
-
+]
 Volume - Hint Management
 
 [A hint activation rule: if the player is shackled, activate the Table of Escape Cell Hints.
