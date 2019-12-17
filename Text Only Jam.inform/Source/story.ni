@@ -17,11 +17,13 @@ Include Epistemology by Eric Eve.
 [Include Exit Lister by Eric Eve.]
 [Include Hiding Under by Eric Eve.]
 [Include Locksmith by Emily Short.]
+Include Modified Exit by Emily Short.
 [Include Notepad by Jim Aikin.]
 Include Postures by Emily Short.
 [Include Secret Doors by Gavin Lambert.]
 Include Simple Followers by Emily Short.
 [Include Skeleton Keys by Emily Short.]
+Include Variable Time Control by Eric Eve.
 
 [broken]
 [Include Remembering by Aaron Reed.]
@@ -35,6 +37,13 @@ Include Simple Followers by Emily Short.
 [Include Automap by Mark Tilford.]
 
 Use American dialect, [brief room descriptions, ]scoring, and the serial comma.
+
+Chapter - Debug - Not for release
+
+When play begins:
+	now the left hand status line is 
+		"[the player's surroundings] / [turn count] / [score]"; 
+	now the right hand status line is "DEBUG [time of day]".
 
 Chapter - Release Extensions - For release only
 
@@ -57,8 +66,6 @@ Include Reversed Persuasion Correction by Juhana Leinonen.
 
 Volume - Preliminaries
 
-The time of day is 1:19 PM.
-
 [more entertaining than "never"]
 To decide whether pigs fly: no.
 
@@ -74,7 +81,9 @@ To say br: say line break.
 The number of saves is a number which varies.
 Check saving the game: increment the number of saves.
 
-Book - The Score
+Book - Meta Content
+
+Part - The Score
 
 The maximum score is 17.
 When play ends:
@@ -94,8 +103,6 @@ Score	Rank
 13	"Heroic Knight (5)"
 16	"Lord (6)"
 17	"Heroic Lord (7)"
-
-Book - Meta Content
 
 Part - Bibliography etc
 
@@ -221,7 +228,7 @@ To add thought (addend - text) to (target - thing):
 		
 Chapter - Knowing People
 
-A person can be introduced. A person is usually not introduced.
+A person can be introduced. A person is usually not introduced. The player is introduced.
 
 A person has text called the unknown-name. The unknown-name is usually "a person".
 
@@ -232,7 +239,11 @@ Chapter - The Magic Word
 
 Xyzzying is an action applying to nothing. Understand "xyzzy" as xyzzying.
 Report xyzzying:
-	say "You recite the magic word, but nothing happens!"
+	say "You chant the magic word, 'Xyzzy!'
+
+An imp appears holding a metal circle with a pair of dials in the center. It reads [time of day] with a [if it is daytime]sun[otherwise]moon[end if] behind the dials.
+
+In a flash, the imp disappears."
 	
 Xyzzy is a subject. Xyzzy is familiar. Understand "magic word" as xyzzy. The thought is "A magic word, but what could it mean?"
 
@@ -296,6 +307,12 @@ Chapter - Furniture
 
 A chair is a kind of supporter. A chair is always enterable. Every chair allows seated and standing. The posture of a chair is usually seated.
 A bed is a kind of supporter. A bed is always enterable. Every bed allows seated and reclining. The posture of a bed is usually reclining.
+A desk is a kind of supporter. Every desk allows standing, seated, and reclining. The posture of a desk is usually standing.
+
+Instead of standing up when the holder of the actor is a chair:
+	try exiting.
+
+A room is usually posture-unfriendly.
 
 Chapter - Descenders
 
@@ -358,19 +375,82 @@ Volume - Locations
 
 Book - Main
 
-The Tunnel is a room.
+Chapter - The Tavern
+
+Section - The Main Hall
+
+The Main Hall is a room. "This hall lit dimly by rows after row of candles along the walls features a large benched table to the south and several round tables with chairs in the center. Along the north wall runs a bar, and a passage west leads to the cloakroom and the tavern's exit."
+
+A tavern chair is a kind of chair. It is scenery. The description is "It's an ordinary wooden chair. Not cozy, but with a few mugs of ale down, it's less of an issue."
+
+A tavern bench is a kind of chair. It is scenery. The description is "A lengthy plank with regular tall stumps to prop it up from the floor. Too close to the ground for your comfort. You always prefer the chairs."
+
+A tavern chair called Saffi-chair is here. The printed name is "a chair".
+
+20 tavern chairs are here. Two tavern benches are here.
+
+A scenery desk called the long table is here. The description is "Nestled against the southern wall is a grand table with long benches, a sort of secondary seated bar, with random patrons carving their own little spots."
+
+A tavern table is a kind of desk. It is scenery. The description is "A table of thick wood cut haphazardly, seating four."
+Five tavern tables are here.
+
+The bar is here. It is scenery.
+
+Section - The Cloakroom
+
+The Cloakroom is west of the Main Hall.
+
+A door called the entry door is south of the cloakroom.
+
+Instead of opening the entry door, say "You'd best not."
+
+Section - The Bar
+
+Before going north from the main hall, say "You walk around the bar to get behind it."
+
+A room called Behind-the-Bar is north of the main hall. The printed name is "Behind the Bar".
+
+Section - The Kitchen
+
+The Kitchen is north of the kitchen door.
+
+A door called the kitchen door is north of behind-the-bar and south of the kitchen. "A wooden door [if closed]is [end if]set [if the player is in the kitchen]in the southern wall[otherwise if the player is in behind-the-bar]behind the bar[end if][if open] lies open[end if]."
+
+After going north to the kitchen:
+	try silently closing the kitchen door;
+	if the kitchen door is open, continue the action;
+	say "You step through into the kitchen and close the door behind yourself."
+
+After going south to behind-the-bar:
+	try silently closing the kitchen door;
+	if the kitchen door is open, continue the action;
+	say "You step through to the main hall, behind the bar, and close the door."
+
+Section - Tavern Generalities
+
+The Tavern is a region. The Main Hall, the Cloakroom, Behind the Bar, and the Kitchen are in the Tavern.
+
+Chapter - The Dungeon
 
 Volume - Characters
 
-Book - Player (Fen) the Noble Fighter Leader
+Book - Player (Ernis Rainard)
 
-The player is a person called Fen. They are in the tunnel.
+Chapter - Description
 
-The thought of the player is "You're pretty cool."
+The player is a person called Ernis Raynard. He is in the main hall. The description is "You're a shadow of your former adventurous self, but five years of running your own shop have mellowed any nostalgia for the life of a squire."
 
-Book - Saffi the Ignored Cleric Searching for Truth
+Chapter - Thoughts
 
-A woman called Saffi is in the tunnel. The unknown-name is "an armored woman with flowing purple hair". Understand "woman", "purple woman", "purple hair", and "armored woman" as Saffi.
+The thought of the player is "Fourteen years ago, you were squire to the knight Sir Galien, who came up against the dark mage Bardolf Malgerius and failed. You were wrongfully accused for Sir Galien's murder but managed to escape and save King Nichol from the same fate at Bardolf's hands.
+
+The king offered you a position on his Kingsguard, but you refused. That adventure was enough for your lifetime. So instead, you settled in as apprentice to a shopkeeper, starting your life anew.
+
+Nine years later, you now run your own shop with a number of regular patrons and hardworking employees. It's much cozier than getting yourself killed like Galien did - and you don't miss the adventure. Not one bit."
+
+Book - Saffi
+
+A woman called Saffi is on Saffi-chair. She is seated. The unknown-name is "an armored woman with flowing purple hair". Understand "woman", "purple woman", "purple hair", and "armored woman" as Saffi.
 
 After saying hello to Saffi when the greeting type is explicit:
 	say "'Hey,' she says."
@@ -398,6 +478,28 @@ A man called Rale is in the tunnel. The unknown-name is "a short man with an eno
 [Book - Tira the Self-Righteous Wizard
 
 A woman called Tira is in the tunnel. The unknown-name is "a tall woman in thin robes". Understand "woman" and "tall woman" and "robed woman" as Tira.]
+
+Volume - Events
+
+Chapter - Time
+
+When play begins, now seconds_per_turn is 30.
+
+After waiting:
+	take 150 secs; 
+	continue the action.
+
+The time of day is 6:19 PM.
+
+To decide whether it is daytime:
+	if the time of day is before 8 PM:
+		if the time of day is after 6 AM, yes;
+	no.
+
+Book - The Dragon Attack
+
+At 6:24 PM:
+	say "[200 secs]The dragon attacks."
 
 Volume - Hint Management
 
