@@ -218,6 +218,15 @@ To add thought (addend - text) to (target - thing):
 	otherwise:
 		let current-text be the thought of the target;
 		now the thought of the target is "[current-text] [addend]".
+		
+Chapter - Knowing People
+
+A person can be introduced. A person is usually not introduced.
+
+A person has text called the unknown-name. The unknown-name is usually "a person".
+
+Rule for printing the name of a person who is not introduced (called the target):
+	say "[the unknown-name of the target]".
 
 Chapter - The Magic Word
 
@@ -327,7 +336,7 @@ Check using it on:
 
 Book - Conversation
 
-Understand "hello [someone]" and "hi [someone]" as saying hello to.
+Understand "hello [someone]" and "hi [someone]" and "hey [someone]"as saying hello to.
 
 Understand "goodbye [someone]" and "bye [someone]" as saying goodbye to.
 
@@ -347,15 +356,6 @@ hint			used
 
 Volume - Locations
 
-A person can be introduced. A person is usually not introduced.
-
-A person has text called the unknown-name. The unknown-name is usually "a person".
-
-[The printed name of a person (called the target) is usually "[if the target is introduced][the name of the target][otherwise][the unknown-name of the target]."]
-
-Rule for printing the name of a person who is not introduced (called the target):
-	say "[the unknown-name of the target]".
-
 Book - Main
 
 The Tunnel is a room.
@@ -370,9 +370,13 @@ The thought of the player is "You're pretty cool."
 
 Book - Saffi the Ignored Cleric Searching for Truth
 
-A woman called Saffi is in the tunnel. The unknown-name is "an armored woman with flowing purple hair". Understand "woman" and "armored woman" as Saffi.
+A woman called Saffi is in the tunnel. The unknown-name is "an armored woman with flowing purple hair". Understand "woman", "purple woman", "purple hair", and "armored woman" as Saffi.
 
-After saying hello to Saffi, say "'Hey,' she says. [run paragraph on]"
+After saying hello to Saffi when the greeting type is explicit:
+	say "'Hey,' she says."
+	
+After saying hello to Saffi when the greeting type is implicit:
+	say "'Hey,' she says. [run paragraph on]".
 
 After quizzing Saffi about the player, say "'You're okay. That's good.'"
 
@@ -390,11 +394,11 @@ After saying goodbye to Saffi, say "Saffi waves."
 Book - Rale the Smart, Posturing Ranger
 
 A man called Rale is in the tunnel. The unknown-name is "a short man with an enormous bow". Understand "man" and "short man" and "bowman" and "bow man" as Rale.
-[
-Book - Tira the Self-Righteous Wizard
 
-A woman called Tira is in the tunnel. The unknown-name is "a tall woman in thin robes". Understand "woman" and "tall woman" and "robed woman" as Tira.
-]
+[Book - Tira the Self-Righteous Wizard
+
+A woman called Tira is in the tunnel. The unknown-name is "a tall woman in thin robes". Understand "woman" and "tall woman" and "robed woman" as Tira.]
+
 Volume - Hint Management
 
 [A hint activation rule: if the player is shackled, activate the Table of Escape Cell Hints.

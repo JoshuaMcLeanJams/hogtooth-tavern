@@ -1,26 +1,26 @@
 ! Blurb file created by Inform build 6M62
 
-status "C:\Program Files (x86)\Inform 7\Internal\Miscellany\CblorbModel.html" "M:\gamedev\projects\inform\Text-Only-Jam\Text Only Jam.inform\Build\StatusCblorb.html"
+status "C:\Program Files\Inform 7\Internal\Miscellany\CblorbModel.html" "C:\Users\secid\Desktop\text-only-jam\Text Only Jam.inform\Build\StatusCblorb.html"
 
 
 ! Identification
 
-project folder "M:\gamedev\projects\inform\Text-Only-Jam\Text Only Jam.inform"
-release to "M:\gamedev\projects\inform\Text-Only-Jam\Text Only Jam.materials\Release"
+project folder "C:\Users\secid\Desktop\text-only-jam\Text Only Jam.inform"
+release to "C:\Users\secid\Desktop\text-only-jam\Text Only Jam.materials\Release"
 
 ! Blorb instructions
 
 storyfile leafname "Text Only Jam.zblorb"
-storyfile "M:\gamedev\projects\inform\Text-Only-Jam\Text Only Jam.inform\Build\output.z8" include
-ifiction "M:\gamedev\projects\inform\Text-Only-Jam\Text Only Jam.inform\Metadata.iFiction" include
-cover "C:\Program Files (x86)\Inform 7\Internal\Miscellany\Cover.jpg"
-picture 1 "C:\Program Files (x86)\Inform 7\Internal\Miscellany\Cover.jpg"
-release file "C:\Program Files (x86)\Inform 7\Internal\Miscellany\Cover.jpg"
-release file "C:\Program Files (x86)\Inform 7\Internal\Miscellany\Small Cover.jpg"
+storyfile "C:\Users\secid\Desktop\text-only-jam\Text Only Jam.inform\Build\output.z8" include
+ifiction "C:\Users\secid\Desktop\text-only-jam\Text Only Jam.inform\Metadata.iFiction" include
+cover "C:\Program Files\Inform 7\Internal\Miscellany\Cover.jpg"
+picture 1 "C:\Program Files\Inform 7\Internal\Miscellany\Cover.jpg"
+release file "C:\Program Files\Inform 7\Internal\Miscellany\Cover.jpg"
+release file "C:\Program Files\Inform 7\Internal\Miscellany\Small Cover.jpg"
 
 ! Placeholder variables
 
-placeholder [IFID] = "7E2436D8-4C83-4E41-AF21-FA1E7757FB3D"
+placeholder [IFID] = "79E92258-9DAC-4058-8AE2-D897D3FE36A6"
 placeholder [RELEASE] = "3"
 placeholder [YEAR] = "2018"
 placeholder [TITLE] = "Text Only Jam"
@@ -32,27 +32,27 @@ placeholder [BLURB] = "TODO description."
 source public
 solution
 ifiction
-auxiliary "M:\gamedev\projects\inform\Text-Only-Jam\Text Only Jam.materials\changelog.md" "Changelog" "--"
-auxiliary "C:\Program Files (x86)\Inform 7\Internal\Miscellany\IntroductionToIF.pdf" "Introduction to IF" "--"
-auxiliary "C:\Program Files (x86)\Inform 7\Internal\Miscellany\Postcard.pdf" "IF Postcard" "--"
+auxiliary "C:\Users\secid\Desktop\text-only-jam\Text Only Jam.materials\changelog.md" "Changelog" "--"
+auxiliary "C:\Program Files\Inform 7\Internal\Miscellany\IntroductionToIF.pdf" "Introduction to IF" "--"
+auxiliary "C:\Program Files\Inform 7\Internal\Miscellany\Postcard.pdf" "IF Postcard" "--"
 placeholder [OTHERCREDITS] = "The postcard was written by Andrew Plotkin and designed by Lea Albaugh."
 
 ! Website instructions
 
 placeholder [ENCODEDSTORYFILE] = "Text Only Jam.zblorb.js"
-template path "M:\gamedev\projects\inform\Text-Only-Jam\Text Only Jam.materials\Templates"
+template path "C:\Users\secid\Desktop\text-only-jam\Text Only Jam.materials\Templates"
 template path "C:\Users\secid\Documents\Inform\Templates"
-template path "C:\Program Files (x86)\Inform 7\Internal\Templates"
+template path "C:\Program Files\Inform 7\Internal\Templates"
 placeholder [INTERPRETERSCRIPTS] = " "
 interpreter "Parchment" "z"
-base64 "M:\gamedev\projects\inform\Text-Only-Jam\Text Only Jam.inform\Build\output.z8" to "M:\gamedev\projects\inform\Text-Only-Jam\Text Only Jam.materials\Release\interpreter\Text Only Jam.zblorb.js"
+base64 "C:\Users\secid\Desktop\text-only-jam\Text Only Jam.inform\Build\output.z8" to "C:\Users\secid\Desktop\text-only-jam\Text Only Jam.materials\Release\interpreter\Text Only Jam.zblorb.js"
 
 ! Website instructions
 
-template path "M:\gamedev\projects\inform\Text-Only-Jam\Text Only Jam.materials\Templates"
+template path "C:\Users\secid\Desktop\text-only-jam\Text Only Jam.materials\Templates"
 template path "C:\Users\secid\Documents\Inform\Templates"
-template path "C:\Program Files (x86)\Inform 7\Internal\Templates"
+template path "C:\Program Files\Inform 7\Internal\Templates"
 css
 website "Standard"
-status instruction ||&nbsp;<a href="source:story.ni#line100"><img border=0 src=inform:/doc_images/Reveal.png></a>||
+status instruction ||&nbsp;<a href="source:story.ni#line102"><img border=0 src=inform:/doc_images/Reveal.png></a>||
 status alternative ||Using 'Release along with cover art', to provide something more distinctive than the default artwork above&nbsp;<a href=inform:/doc403.html><img border=0 src=inform:/doc_images/help.png></a>||
