@@ -373,11 +373,9 @@ hint			used
 
 Volume - Locations
 
-Book - Main
+Book - Introduction (The Tavern)
 
-Chapter - The Tavern
-
-Section - The Main Hall
+Chapter - The Main Hall
 
 The Main Hall is a room. "This hall lit dimly by rows after row of candles along the walls features a large benched table to the south and several round tables with chairs in the center. Along the north wall runs a bar, and a passage west leads to the cloakroom and the tavern's exit."
 
@@ -387,16 +385,17 @@ A tavern bench is a kind of chair. It is scenery. The description is "A lengthy 
 
 A tavern chair called Saffi-chair is here. The printed name is "a chair".
 
-20 tavern chairs are here. Two tavern benches are here.
+15 tavern chairs are here. Two tavern benches are here.
 
 A scenery desk called the long table is here. The description is "Nestled against the southern wall is a grand table with long benches, a sort of secondary seated bar, with random patrons carving their own little spots."
 
 A tavern table is a kind of desk. It is scenery. The description is "A table of thick wood cut haphazardly, seating four."
-Five tavern tables are here.
+
+Three tavern tables are here.
 
 The bar is here. It is scenery.
 
-Section - The Cloakroom
+Chapter - The Cloakroom
 
 The Cloakroom is west of the Main Hall.
 
@@ -404,33 +403,93 @@ A door called the entry door is south of the cloakroom.
 
 Instead of opening the entry door, say "You'd best not."
 
-Section - The Bar
+Chapter - The Bar
 
 Before going north from the main hall, say "You walk around the bar to get behind it."
 
 A room called Behind-the-Bar is north of the main hall. The printed name is "Behind the Bar".
 
-Section - The Kitchen
+Chapter - The Kitchen
 
 The Kitchen is north of the kitchen door.
 
 A door called the kitchen door is north of behind-the-bar and south of the kitchen. "A wooden door [if closed]is [end if]set [if the player is in the kitchen]in the southern wall[otherwise if the player is in behind-the-bar]behind the bar[end if][if open] lies open[end if]."
 
+A door called the trapdoor is down from the kitchen.
+
 After going north to the kitchen:
 	try silently closing the kitchen door;
 	if the kitchen door is open, continue the action;
-	say "You step through into the kitchen and close the door behind yourself."
+	say "You step through into the kitchen and close the door behind yourself.";
+	continue the action.
 
 After going south to behind-the-bar:
 	try silently closing the kitchen door;
 	if the kitchen door is open, continue the action;
-	say "You step through to the main hall, behind the bar, and close the door."
+	say "You step through to the main hall, behind the bar, and close the door.";
+	continue the action.
+	
+Chapter - The Cellar
 
-Section - Tavern Generalities
+The Cellar is down from the trapdoor.
 
-The Tavern is a region. The Main Hall, the Cloakroom, Behind the Bar, and the Kitchen are in the Tavern.
+Chapter - Tavern Generalities
 
-Chapter - The Dungeon
+The Main Hall, the Cloakroom, Behind-the-Bar, the Kitchen, and the Cellar are in a region called the Tavern.
+
+Book - Main Game (The Dungeon)
+
+Chapter - Portal Room
+
+The Portal Room is south from the cellar.
+
+A fixed in place container called the portal is here. "A glowing portal beckons you to enter."
+
+Instead of entering the portal for the first time:
+	say "It's quite possible this portal goes one way. Best be sure you have everything you need."
+	
+Instead of entering the portal:
+	say "You step through the portal, blinded by its brightness before all fades to black. When your vision returns, you find yourself in...";
+	now the player is in the ruined courtyard.
+	
+Instead of inserting something (called the item) into the portal:
+	now the item is in the ruined courtyard.
+	
+Chapter - Dungeon Generalities
+
+The Portal Room is in a region called the Dungeon.
+
+Book - Endgame (Castle Aeremanth Ruins)
+
+Chapter - Castle Ruins
+
+The Ruined Courtyard is a room. "The shattered stone towers and cracked ground make it difficult to recognize this place, but there is a certain energy that makes you feel at home. The eerie, dark purple tint of the sky forces you to shiver. This place was once a world of life and safety, but is now the domain of Bardolf Malgerius.
+
+Dwarfing the remains of fallen castle structures to the north, a massive chapel stands on the site of Bardolf's former dark magic. This was meant to contain the evil energy that permeates this place. It has clearly failed."
+
+East of the ruined courtyard is the ruined courtyard.
+Southeast of the ruined courtyard is the ruined courtyard.
+Southwest of the ruined courtyard is the ruined courtyard.
+South of the ruined courtyard is the ruined courtyard.
+
+Instead of going east from the ruined courtyard, explain the destiny.
+Instead of going west from the ruined courtyard, explain the destiny.
+Instead of going south from the ruined courtyard, explain the destiny.
+Instead of going northeast from the ruined courtyard, explain the destiny.
+Instead of going northwest from the ruined courtyard, explain the destiny.
+Instead of going southeast from the ruined courtyard, explain the destiny.
+Instead of going southwest from the ruined courtyard, explain the destiny.
+
+To explain the destiny:
+	say "You know your destiny lies in the chapel to the north. That is where you should go."
+
+Chapter - Chapel
+
+The Chapel is north of the ruined courtyard.
+
+Chapter - Castle Ruins Generalities
+
+The Ruined Courtyard and the Chapel are in a region called Castle Aeremanth Ruins.
 
 Volume - Characters
 
@@ -450,7 +509,9 @@ Nine years later, you now run your own shop with a number of regular patrons and
 
 Book - Saffi
 
-A woman called Saffi is on Saffi-chair. She is seated. The unknown-name is "an armored woman with flowing purple hair". Understand "woman", "purple woman", "purple hair", and "armored woman" as Saffi.
+A seen, familiar, introduced woman called Saffi is on Saffi-chair. "[if seated]Saffi is sitting on [location].[otherwise]Your wife, Saffi, is here." She is seated. Understand "my wife" and "wife", "purple woman", "purple hair", and "armored woman" as Saffi.
+
+The thought of Saffi is "You married Saffi six years ago, right before opening up your own shop. She's been your constant companion ever since. The two of you have been waiting for the shop to stabilize before starting a family, and you're right on the cusp of it. Maybe next year."
 
 After saying hello to Saffi when the greeting type is explicit:
 	say "'Hey,' she says."
@@ -458,18 +519,16 @@ After saying hello to Saffi when the greeting type is explicit:
 After saying hello to Saffi when the greeting type is implicit:
 	say "'Hey,' she says. [run paragraph on]".
 
-After quizzing Saffi about the player, say "'You're okay. That's good.'"
+After quizzing Saffi about the player, say "'Really? Is this the time for insecurity?'"
 
 After quizzing Saffi about Saffi:
-	say "'Oh, I'm Saffi. That's all I remember. And something about... a dragon?'";
-	now Saffi is introduced;
-	add thought "An armored woman with flowing, purple hair." to Saffi.
-	
-After quizzing Saffi about Rale:
-	say "'He rubs me the wrong way. Not sure why.'";
-	add thought "She doesn't like Rale." to Saffi.
+	say "[one of]'Funny. We've only been married six years.' She rolls her eyes.[or]'Okay.' She puts her arms akimbo. 'What would you like to know?'[or]She releases an aggravated sigh. 'This is getting old.'[or]Waving her hands in the air, she says, 'I'm the queen of the world. Is that what you want?'[or]'If you haven't figured it out yet, you'll never figure it out.'[or]There is no response.[stopping]"
 
-After saying goodbye to Saffi, say "Saffi waves."
+After saying goodbye to Saffi when the farewell type is explicit:
+	say "'Stay safe.'"
+
+After saying goodbye to Saffi when the farewell type is implicit:
+	say "'Don't go too far,' Saffi says"
 
 Book - Rale the Smart, Posturing Ranger
 

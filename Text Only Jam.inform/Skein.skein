@@ -1,683 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-78"/>
+  <activeNode nodeId="node-116"/>
   <item nodeId="node-1">
     <command xml:space="preserve">Text Only Jam</command>
-    <result xml:space="preserve">Text Only Jam&#x000A;TODO Headline by Joshua McLean&#x000A;Release 3 / Serial number 191217 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Main Hall&#x000A;On a chair is an armored woman with flowing purple hair.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Text Only Jam&#x000A;TODO Headline by Joshua McLean&#x000A;Release 3 / Serial number 191218 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Main Hall&#x000A;This hall lit dimly by rows after row of candles along the walls features a large benched table to the south and several round tables with chairs in the center. Along the north wall runs a bar, and a passage west leads to the cloakroom and the tavern's exit.&#x000A;&#x000A;On a chair is Saffi.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-2"/>
-      <child nodeId="node-3"/>
-      <child nodeId="node-4"/>
-      <child nodeId="node-46"/>
-      <child nodeId="node-50"/>
-      <child nodeId="node-63"/>
-      <child nodeId="node-70"/>
+      <child nodeId="node-101"/>
+      <child nodeId="node-113"/>
     </children>
   </item>
-  <item nodeId="node-2">
-    <command xml:space="preserve">get woman</command>
-    <result xml:space="preserve">I don't suppose an armored woman with flowing purple hair would care for that.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-3">
-    <command xml:space="preserve">time</command>
-    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-4">
-    <command xml:space="preserve">xyzzy</command>
-    <result xml:space="preserve">You chant the magic word, "Xyzzy!"&#x000A;&#x000A;An imp appears holding a metal circle with a pair of dials in the center. It reads 6:19 pm with a sun behind the dials.&#x000A;&#x000A;In a flash, the imp disappears.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-101">
+    <command xml:space="preserve">ask saffi about herself</command>
+    <result xml:space="preserve">"Hey," she says. "Funny. We've only been married six years." She rolls her eyes.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-5"/>
-      <child nodeId="node-12"/>
+      <child nodeId="node-102"/>
+      <child nodeId="node-104"/>
     </children>
   </item>
-  <item nodeId="node-5">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Main Hall&#x000A;On a chair is an armored woman with flowing purple hair.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-102">
+    <command xml:space="preserve">ask saffi about herself</command>
+    <result xml:space="preserve">She rolls her eyes.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-6"/>
+      <child nodeId="node-103"/>
     </children>
   </item>
-  <item nodeId="node-6">
-    <command xml:space="preserve">hi woman</command>
+  <item nodeId="node-103">
+    <command xml:space="preserve">ask about herself</command>
+    <result xml:space="preserve">She rolls her eyes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-104">
+    <command xml:space="preserve">ask about her</command>
+    <result xml:space="preserve">"Okay." She puts her arms akimbo. "What would you like to know?"&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-105"/>
+    </children>
+  </item>
+  <item nodeId="node-105">
+    <command xml:space="preserve">ask about her</command>
+    <result xml:space="preserve">She releases an aggravated sigh. "This is getting old."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-106"/>
+    </children>
+  </item>
+  <item nodeId="node-106">
+    <command xml:space="preserve">ask about her</command>
+    <result xml:space="preserve">Waving her hands in the air, she says, "I'm the queen of the world. Is that what you want?"&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-107"/>
+    </children>
+  </item>
+  <item nodeId="node-107">
+    <command xml:space="preserve">ask about her</command>
+    <result xml:space="preserve">"If you haven't figured it out yet, you'll never figure it out."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-108"/>
+    </children>
+  </item>
+  <item nodeId="node-108">
+    <command xml:space="preserve">ask about her</command>
+    <result xml:space="preserve">There is no response.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-109"/>
+    </children>
+  </item>
+  <item nodeId="node-109">
+    <command xml:space="preserve">ask about her</command>
+    <result xml:space="preserve">There is no response.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-110"/>
+    </children>
+  </item>
+  <item nodeId="node-110">
+    <command xml:space="preserve">ask about her</command>
+    <result xml:space="preserve">There is no response.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-111"/>
+    </children>
+  </item>
+  <item nodeId="node-111">
+    <command xml:space="preserve">ask about her</command>
+    <result xml:space="preserve">There is no response.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-112"/>
+    </children>
+  </item>
+  <item nodeId="node-112">
+    <command xml:space="preserve">ask about her</command>
+    <result xml:space="preserve">There is no response.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+  </item>
+  <item nodeId="node-113">
+    <command xml:space="preserve">hi saffi</command>
     <result xml:space="preserve">"Hey," she says.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-7"/>
+      <child nodeId="node-114"/>
     </children>
   </item>
-  <item nodeId="node-7">
-    <command xml:space="preserve">what's up</command>
-    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-114">
+    <command xml:space="preserve">bye</command>
+    <result xml:space="preserve">"Stay safe."&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-8"/>
+      <child nodeId="node-115"/>
     </children>
   </item>
-  <item nodeId="node-8">
-    <command xml:space="preserve">ask about tavern</command>
-    <result xml:space="preserve">There is no reply.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-115">
+    <command xml:space="preserve">hi saffi</command>
+    <result xml:space="preserve">"Hey," she says.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-9"/>
+      <child nodeId="node-116"/>
     </children>
   </item>
-  <item nodeId="node-9">
-    <command xml:space="preserve">ask about me</command>
-    <result xml:space="preserve">"You're okay. That's good."&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-10"/>
-    </children>
-  </item>
-  <item nodeId="node-10">
-    <command xml:space="preserve">ask about her</command>
-    <result xml:space="preserve">"Oh, I'm Saffi. That's all I remember. And something about... a dragon?"&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-11"/>
-    </children>
-  </item>
-  <item nodeId="node-11">
-    <command xml:space="preserve">xyzzy</command>
-    <result xml:space="preserve">You chant the magic word, "Xyzzy!"&#x000A;&#x000A;An imp appears holding a metal circle with a pair of dials in the center. It reads: 6:25 pm&#x000A;&#x000A;In a flash, the imp disappears.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-12">
-    <command xml:space="preserve">xyzzy</command>
-    <result xml:space="preserve">You chant the magic word, "Xyzzy!"&#x000A;&#x000A;An imp appears holding a metal circle with a pair of dials in the center. It reads 6:19 pm with a sun behind the dials.&#x000A;&#x000A;In a flash, the imp disappears.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-13"/>
-    </children>
-  </item>
-  <item nodeId="node-13">
-    <command xml:space="preserve">xyzzy</command>
-    <result xml:space="preserve">You chant the magic word, "Xyzzy!"&#x000A;&#x000A;An imp appears holding a metal circle with a pair of dials in the center. It reads 6:19 pm with a sun behind the dials.&#x000A;&#x000A;In a flash, the imp disappears.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-14"/>
-    </children>
-  </item>
-  <item nodeId="node-14">
-    <command xml:space="preserve">xyzzy</command>
-    <result xml:space="preserve">You chant the magic word, "Xyzzy!"&#x000A;&#x000A;An imp appears holding a metal circle with a pair of dials in the center. It reads 6:19 pm with a sun behind the dials.&#x000A;&#x000A;In a flash, the imp disappears.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-15"/>
-    </children>
-  </item>
-  <item nodeId="node-15">
-    <command xml:space="preserve"></command>
-    <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-16"/>
-    </children>
-  </item>
-  <item nodeId="node-16">
+  <item nodeId="node-116">
     <command xml:space="preserve">n</command>
-    <result xml:space="preserve">You walk around the bar to get behind it.&#x000A;&#x000A;Behind the Bar&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-17"/>
-    </children>
-  </item>
-  <item nodeId="node-17">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Main Hall&#x000A;On a chair is an armored woman with flowing purple hair.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-18"/>
-    </children>
-  </item>
-  <item nodeId="node-18">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">You walk around the bar to get behind it.&#x000A;&#x000A;Behind the Bar&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-19"/>
-    </children>
-  </item>
-  <item nodeId="node-19">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Main Hall&#x000A;On a chair is an armored woman with flowing purple hair.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-20"/>
-    </children>
-  </item>
-  <item nodeId="node-20">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">You walk around the bar to get behind it.&#x000A;&#x000A;Behind the Bar&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-21"/>
-    </children>
-  </item>
-  <item nodeId="node-21">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Main Hall&#x000A;On a chair is an armored woman with flowing purple hair.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-22"/>
-    </children>
-  </item>
-  <item nodeId="node-22">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">You walk around the bar to get behind it.&#x000A;&#x000A;Behind the Bar&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-23"/>
-    </children>
-  </item>
-  <item nodeId="node-23">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Main Hall&#x000A;On a chair is an armored woman with flowing purple hair.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-24"/>
-    </children>
-  </item>
-  <item nodeId="node-24">
-    <command xml:space="preserve">time</command>
-    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-25"/>
-    </children>
-  </item>
-  <item nodeId="node-25">
-    <command xml:space="preserve">xyzzy</command>
-    <result xml:space="preserve">You chant the magic word, "Xyzzy!"&#x000A;&#x000A;An imp appears holding a metal circle with a pair of dials in the center. It reads 6:22 pm with a sun behind the dials.&#x000A;&#x000A;In a flash, the imp disappears.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-26"/>
-    </children>
-  </item>
-  <item nodeId="node-26">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-27"/>
-    </children>
-  </item>
-  <item nodeId="node-27">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-28"/>
-    </children>
-  </item>
-  <item nodeId="node-28">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-29"/>
-    </children>
-  </item>
-  <item nodeId="node-29">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-30"/>
-    </children>
-  </item>
-  <item nodeId="node-30">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-31"/>
-    </children>
-  </item>
-  <item nodeId="node-31">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-32"/>
-    </children>
-  </item>
-  <item nodeId="node-32">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-33"/>
-    </children>
-  </item>
-  <item nodeId="node-33">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-34"/>
-    </children>
-  </item>
-  <item nodeId="node-34">
-    <command xml:space="preserve">xyzzy</command>
-    <result xml:space="preserve">You chant the magic word, "Xyzzy!"&#x000A;&#x000A;An imp appears holding a metal circle with a pair of dials in the center. It reads 6:24 pm with a sun behind the dials.&#x000A;&#x000A;In a flash, the imp disappears.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-35"/>
-    </children>
-  </item>
-  <item nodeId="node-35">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-36"/>
-    </children>
-  </item>
-  <item nodeId="node-36">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-37"/>
-    </children>
-  </item>
-  <item nodeId="node-37">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-38"/>
-    </children>
-  </item>
-  <item nodeId="node-38">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-39"/>
-    </children>
-  </item>
-  <item nodeId="node-39">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-40"/>
-    </children>
-  </item>
-  <item nodeId="node-40">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-41"/>
-    </children>
-  </item>
-  <item nodeId="node-41">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-42"/>
-    </children>
-  </item>
-  <item nodeId="node-42">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-43"/>
-    </children>
-  </item>
-  <item nodeId="node-43">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-44"/>
-    </children>
-  </item>
-  <item nodeId="node-44">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-45"/>
-    </children>
-  </item>
-  <item nodeId="node-45">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The dragon attacks.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-46">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-47"/>
-      <child nodeId="node-55"/>
-      <child nodeId="node-58"/>
-    </children>
-  </item>
-  <item nodeId="node-47">
-    <command xml:space="preserve">xyzzy</command>
-    <result xml:space="preserve">You chant the magic word, "Xyzzy!"&#x000A;&#x000A;An imp appears holding a metal circle with a pair of dials in the center. It reads 6:19 pm with a sun behind the dials.&#x000A;&#x000A;In a flash, the imp disappears.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-48"/>
-    </children>
-  </item>
-  <item nodeId="node-48">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-49"/>
-    </children>
-  </item>
-  <item nodeId="node-49">
-    <command xml:space="preserve">xyzzy</command>
-    <result xml:space="preserve">You chant the magic word, "Xyzzy!"&#x000A;&#x000A;An imp appears holding a metal circle with a pair of dials in the center. It reads 6:20 pm with a sun behind the dials.&#x000A;&#x000A;In a flash, the imp disappears.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-55">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-56"/>
-    </children>
-  </item>
-  <item nodeId="node-56">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The dragon attacks.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-57"/>
-    </children>
-  </item>
-  <item nodeId="node-57">
-    <command xml:space="preserve">xyzzy</command>
-    <result xml:space="preserve">You chant the magic word, "Xyzzy!"&#x000A;&#x000A;An imp appears holding a metal circle with a pair of dials in the center. It reads 6:29 pm with a sun behind the dials.&#x000A;&#x000A;In a flash, the imp disappears.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-58">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">You walk around the bar to get behind it.&#x000A;&#x000A;Behind the Bar&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-59"/>
-    </children>
-  </item>
-  <item nodeId="node-59">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Main Hall&#x000A;On a chair is an armored woman with flowing purple hair.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-60"/>
-    </children>
-  </item>
-  <item nodeId="node-60">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">You walk around the bar to get behind it.&#x000A;&#x000A;Behind the Bar&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-61"/>
-    </children>
-  </item>
-  <item nodeId="node-61">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-62"/>
-    </children>
-  </item>
-  <item nodeId="node-62">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;The dragon attacks.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-50">
-    <command xml:space="preserve">xyzzy;wait</command>
-    <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-51"/>
-    </children>
-  </item>
-  <item nodeId="node-51">
-    <command xml:space="preserve">xyzzy, wait</command>
-    <result xml:space="preserve">You chant the magic word, "Xyzzy!"&#x000A;&#x000A;An imp appears holding a metal circle with a pair of dials in the center. It reads 6:19 pm with a sun behind the dials.&#x000A;&#x000A;In a flash, the imp disappears.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
-    <children>
-      <child nodeId="node-52"/>
-    </children>
-  </item>
-  <item nodeId="node-52">
-    <command xml:space="preserve">wait, xyzzy</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;You chant the magic word, "Xyzzy!"&#x000A;&#x000A;An imp appears holding a metal circle with a pair of dials in the center. It reads 6:24 pm with a sun behind the dials.&#x000A;&#x000A;In a flash, the imp disappears.&#x000A;&#x000A;The dragon attacks.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
-    <children>
-      <child nodeId="node-53"/>
-    </children>
-  </item>
-  <item nodeId="node-53">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
-    <children>
-      <child nodeId="node-54"/>
-    </children>
-  </item>
-  <item nodeId="node-54">
-    <command xml:space="preserve">wait</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
-  </item>
-  <item nodeId="node-63">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">Cloakroom&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-64"/>
-    </children>
-  </item>
-  <item nodeId="node-64">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">(first opening the entry door)&#x000A;You'd best not.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-65"/>
-    </children>
-  </item>
-  <item nodeId="node-65">
-    <command xml:space="preserve">open door</command>
-    <result xml:space="preserve">You'd best not.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-66"/>
-    </children>
-  </item>
-  <item nodeId="node-66">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-67"/>
-    </children>
-  </item>
-  <item nodeId="node-67">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">Main Hall&#x000A;On a chair is an armored woman with flowing purple hair.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-68"/>
-    </children>
-  </item>
-  <item nodeId="node-68">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">You walk around the bar to get behind it.&#x000A;&#x000A;Behind the Bar&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-69"/>
-    </children>
-  </item>
-  <item nodeId="node-69">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Kitchen&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-70">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">You walk around the bar to get behind it.&#x000A;&#x000A;Behind the Bar&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-71"/>
-    </children>
-  </item>
-  <item nodeId="node-71">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">(first opening the kitchen door)&#x000A;You step through into the kitchen and close the door behind yourself.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-72"/>
-      <child nodeId="node-75"/>
-    </children>
-  </item>
-  <item nodeId="node-72">
-    <command xml:space="preserve">actions</command>
-    <result xml:space="preserve">Actions listing on.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-73"/>
-    </children>
-  </item>
-  <item nodeId="node-73">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">[going south]&#x000A;(first opening the kitchen door)&#x000A;[(1) opening the kitchen door - silently]&#x000A;[(1) opening the kitchen door - silently - succeeded]&#x000A;&#x000A;Behind the Bar&#x000A;[going south - succeeded]&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
-    <children>
-      <child nodeId="node-74"/>
-    </children>
-  </item>
-  <item nodeId="node-74">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">[going north]&#x000A;[(1) closing the kitchen door]&#x000A;You close the kitchen door.&#x000A;[(1) closing the kitchen door - succeeded]&#x000A;&#x000A;[going north - succeeded]&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
-  </item>
-  <item nodeId="node-75">
-    <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Kitchen&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-76"/>
-    </children>
-  </item>
-  <item nodeId="node-76">
-    <command xml:space="preserve">x door</command>
-    <result xml:space="preserve">A wooden door is set in the southern wall .&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
-    <children>
-      <child nodeId="node-77"/>
-    </children>
-  </item>
-  <item nodeId="node-77">
-    <command xml:space="preserve">open door</command>
-    <result xml:space="preserve">You open the kitchen door.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-78"/>
-    </children>
-  </item>
-  <item nodeId="node-78">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">Behind the Bar&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You walk around the bar to get behind it.&#x000A;&#x000A;"Don't go too far."&#x000A;&#x000A;Behind the Bar&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
