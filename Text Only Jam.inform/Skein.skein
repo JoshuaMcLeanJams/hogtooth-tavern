@@ -1,201 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-172"/>
+  <activeNode nodeId="node-1"/>
   <item nodeId="node-1">
     <command xml:space="preserve">Text Only Jam</command>
     <result xml:space="preserve">Text Only Jam&#x000A;TODO Headline by Joshua McLean&#x000A;Release 3 / Serial number 191219 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Main Hall (on your chair)&#x000A;This hall lit dimly by rows after row of candles along the walls features a large benched table to the south and several round tables with chairs in the center. Along the north wall runs a bar, and a passage west leads to the cloakroom and the tavern's exit.&#x000A;&#x000A;A stout, round man with curly black hair peeking over the top of his doublet wipes down the bar with a rag.&#x000A;&#x000A;A man with shoulder-cropped blond hair strums on a lute and sings a wordless tune, filling the empty tavern air above the many conversations with beautiful music.&#x000A;&#x000A;You can also see Saffi's chair (on which is Saffi) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-151"/>
-      <child nodeId="node-157"/>
-      <child nodeId="node-162"/>
+      <child nodeId="node-2"/>
+      <child nodeId="node-30"/>
     </children>
   </item>
-  <item nodeId="node-151">
+  <item nodeId="node-2">
     <command xml:space="preserve">stand</command>
     <result xml:space="preserve">You get off your chair.&#x000A;&#x000A;Main Hall&#x000A;This hall lit dimly by rows after row of candles along the walls features a large benched table to the south and several round tables with chairs in the center. Along the north wall runs a bar, and a passage west leads to the cloakroom and the tavern's exit.&#x000A;&#x000A;A stout, round man with curly black hair peeking over the top of his doublet wipes down the bar with a rag.&#x000A;&#x000A;A man with shoulder-cropped blond hair strums on a lute and sings a wordless tune, filling the empty tavern air above the many conversations with beautiful music.&#x000A;&#x000A;You can also see Saffi's chair (on which is Saffi) and your chair here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-152"/>
-      <child nodeId="node-163"/>
-      <child nodeId="node-166"/>
+      <child nodeId="node-11"/>
     </children>
   </item>
-  <item nodeId="node-152">
-    <command xml:space="preserve">ask keeper about saffi</command>
-    <result xml:space="preserve">"Don't care much fer talkin. Ye want a drink?"&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-153"/>
-    </children>
-  </item>
-  <item nodeId="node-153">
-    <command xml:space="preserve">yes</command>
-    <result xml:space="preserve">You need to specify who you want to speak to.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-154"/>
-    </children>
-  </item>
-  <item nodeId="node-154">
-    <command xml:space="preserve">ask keeper about drink</command>
-    <result xml:space="preserve">"Don't care much fer talkin. Ye want a drink?"&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-155"/>
-    </children>
-  </item>
-  <item nodeId="node-155">
-    <command xml:space="preserve">rules all</command>
-    <result xml:space="preserve">Rules tracing now switched to "all". Type "rules off" to switch it off again.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-156"/>
-    </children>
-  </item>
-  <item nodeId="node-156">
-    <command xml:space="preserve">ask keeper about drink</command>
-    <result xml:space="preserve">[Rule "declare everything initially unmentioned rule" applies.]&#x000A;[Rule "announce items from multiple object lists rule" applies.]&#x000A;[Rule "set pronouns from items from multiple object lists rule" applies.]&#x000A;[Rule "before stage rule" applies.]&#x000A;[Rule "giving orders needs an interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "can't converse with absent interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "greet a new interlocutor rule" applies.]&#x000A;[Rule "announce items from multiple object lists rule" applies.]&#x000A;[Rule "set pronouns from items from multiple object lists rule" applies.]&#x000A;[Rule "before stage rule" applies.]&#x000A;[Rule "giving orders needs an interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "can't converse with absent interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "greet a new interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "implicit-conversing needs current interlocutor rule" does not apply (wrong action).]&#x000A;[Rule "instead stage rule" applies.]&#x000A;[Rule "Instead of saying hello to the barkeep" applies.]&#x000A;"Don't care much fer talkin. Ye want a drink?"&#x000A;&#x000A;[Rule "A first turn sequence rule" applies.]&#x000A;[Rule "every turn stage rule" applies.]&#x000A;[Rule "reset protocol rule" applies.]&#x000A;[Rule "Every turn" applies.]&#x000A;[Rule "variable advance time rule" applies.]&#x000A;[Rule "A last turn sequence rule" applies.]&#x000A;[Rule "notify score changes rule" applies.]&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-163">
-    <command xml:space="preserve">ask barkeep about ale</command>
-    <result xml:space="preserve">The barkeep looks at you expectantly.&#x000A;&#x000A;The barkeep pulls a mug of ale and pounds it on the counter. "Two copper," he says.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-164"/>
-    </children>
-  </item>
-  <item nodeId="node-164">
-    <command xml:space="preserve">pay for ale</command>
-    <result xml:space="preserve">Which do you mean, the mug or ale?&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-165"/>
-    </children>
-  </item>
-  <item nodeId="node-165">
-    <command xml:space="preserve">mug</command>
-    <result xml:space="preserve">You give 2 coins to barkeep to pay for the mug.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-166">
+  <item nodeId="node-11">
     <command xml:space="preserve">ask keeper about ale</command>
     <result xml:space="preserve">The barkeep looks at you expectantly.&#x000A;&#x000A;The barkeep pulls a mug of ale and pounds it on the counter. "Two copper," he says.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-167"/>
+      <child nodeId="node-12"/>
     </children>
   </item>
-  <item nodeId="node-167">
+  <item nodeId="node-12">
     <command xml:space="preserve">pay for ale</command>
     <result xml:space="preserve">You give 2 coins to barkeep to pay for the mug.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-168"/>
+      <child nodeId="node-13"/>
     </children>
   </item>
-  <item nodeId="node-168">
+  <item nodeId="node-13">
     <command xml:space="preserve">get mug</command>
     <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-169"/>
+      <child nodeId="node-14"/>
     </children>
   </item>
-  <item nodeId="node-169">
+  <item nodeId="node-14">
     <command xml:space="preserve">ask keeper about ale</command>
     <result xml:space="preserve">"How about ye finish that one first, lad?" He points at the full mug in your hand.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-170"/>
+      <child nodeId="node-15"/>
     </children>
   </item>
-  <item nodeId="node-170">
+  <item nodeId="node-15">
     <command xml:space="preserve">buy ale</command>
     <result xml:space="preserve">Try asking about the mug instead.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <children>
-      <child nodeId="node-171"/>
+      <child nodeId="node-16"/>
     </children>
   </item>
-  <item nodeId="node-171">
+  <item nodeId="node-16">
     <command xml:space="preserve">ask keeper about mug</command>
     <result xml:space="preserve">"How about ye finish that one first, lad?" He points at the full mug in your hand.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-172"/>
+      <child nodeId="node-17"/>
     </children>
   </item>
-  <item nodeId="node-172">
+  <item nodeId="node-17">
     <command xml:space="preserve">drink mug</command>
-    <result xml:space="preserve">There's nothing suitable to drink here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You drink ale from the mug. Tasty!&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
-  <item nodeId="node-157">
-    <command xml:space="preserve">ask keeper about saffi</command>
-    <result xml:space="preserve">You ought to get out of your chair first. He'll throw you out for shouting across the room.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-158"/>
-    </children>
-  </item>
-  <item nodeId="node-158">
-    <command xml:space="preserve">stand</command>
-    <result xml:space="preserve">You get off your chair.&#x000A;&#x000A;Main Hall&#x000A;This hall lit dimly by rows after row of candles along the walls features a large benched table to the south and several round tables with chairs in the center. Along the north wall runs a bar, and a passage west leads to the cloakroom and the tavern's exit.&#x000A;&#x000A;A stout, round man with curly black hair peeking over the top of his doublet wipes down the bar with a rag.&#x000A;&#x000A;A man with shoulder-cropped blond hair strums on a lute and sings a wordless tune, filling the empty tavern air above the many conversations with beautiful music.&#x000A;&#x000A;You can also see Saffi's chair (on which is Saffi) and your chair here.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-30">
+    <command xml:space="preserve">think about dragons</command>
+    <result xml:space="preserve">That isn't available.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-159"/>
+      <child nodeId="node-31"/>
     </children>
   </item>
-  <item nodeId="node-159">
-    <command xml:space="preserve">ask keeper about saffi</command>
-    <result xml:space="preserve">The barkeep looks at you expectantly.&#x000A;&#x000A;"Don't care much fer talkin. Ye want a drink?"&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-31">
+    <command xml:space="preserve">wait</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-160"/>
+      <child nodeId="node-32"/>
     </children>
   </item>
-  <item nodeId="node-160">
-    <command xml:space="preserve">ask about drink</command>
-    <result xml:space="preserve">The barkeep pulls a mug of ale and pounds it on the counter. "Two copper," he says.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-32">
+    <command xml:space="preserve">wait</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-161"/>
+      <child nodeId="node-33"/>
     </children>
   </item>
-  <item nodeId="node-161">
-    <command xml:space="preserve">get drink</command>
-    <result xml:space="preserve">"Ey! Pay for it first. I'll have no thieves in here."&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-33">
+    <command xml:space="preserve">wait</command>
+    <result xml:space="preserve">Time passes.&#x000A;&#x000A;A deafening roar blasts through the cacaphony of voices and the minstrel's music, causing all to stop and fall silent. Seconds pass with patrons exchanging looks of fear and confusion.&#x000A;&#x000A;A column of fire blasts through the cloakroom and it's gone in an instant, now a pile of smoldering ash and sparks. The silence gives way to screams and panic as each person jumps from their seat.&#x000A;&#x000A;Something massive and scaled zooms by the gaping hole into the streets where the cloakroom once was. A dragon? No, impossible.&#x000A;&#x000A;Everyone takes their chance to flee through the enlarged exit, and soon the room is silent again. Only you, Saffi, and the minstrel's lute remain. She looks at you as if asking what to do next.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-34"/>
+    </children>
   </item>
-  <item nodeId="node-162">
-    <command xml:space="preserve">x purse</command>
-    <result xml:space="preserve">A small purse with 10 coins.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-34">
+    <command xml:space="preserve">think about dragon</command>
+    <result xml:space="preserve">That isn't available.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
+    <changed>NO</changed>
   </item>
 </Skein>

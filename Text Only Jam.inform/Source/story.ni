@@ -206,18 +206,20 @@ Report pondering:
 	say "You stop and think for a moment, but nothing specific comes to mind. Maybe you need a HINT or to PONDER ABOUT something."
 
 Thinking about is an action applying to one thing. Understand "ponder [any thing]" and "think about [any thing]" as thinking about.
-
-Pondering about is an action applying to one topic. Understand "ponder [text]" and "think about [text]" as pondering about.
-
 Report thinking about something unknown:
 	say "[no thought]".
-
 Report thinking about something known:
-	if the thought of the noun is "", say "[no thought]";
-	otherwise say "[thought of the noun][paragraph break]".
+	if the thought of the noun is "":
+		if the noun is visible:
+			try examining the noun;
+		otherwise:
+			say "[no thought]";
+	otherwise:
+		say "[thought of the noun][paragraph break]".
 
+[Pondering about is an action applying to one topic. Understand "ponder [text]" and "think about [text]" as pondering about.
 Report pondering about:
-	say "[no thought]".
+	say "[no thought]".]
 
 To say no thought:
 	say "No specific memories come to mind."
@@ -372,7 +374,7 @@ Carry out drinking something:
 	now the noun is empty.
 	
 Report drinking something:
-	say "You drink [the liquid of the noun] from [the noun]. Tasty!".
+	say "You drink [the liquid of the noun] from [the noun]. Tasty![90 sec]".
 
 Chapter - Furniture
 
@@ -628,9 +630,9 @@ After saying goodbye to Saffi when the farewell type is implicit:
 
 Part - Subjects
 
-The hogtooth tavern is a familiar Saffi-familiar subject. The thought is "Hogtooth has been your go-to tavern for decades. You appreciate the somewhat quieter clientele and the rotation of minstrels providing a variety of musical talent. The ale's not bad, either. And all of that makes up for the grumpy barkeep." The Saffi-thought is "'I like this place. It's warm and cozy, but not too cramped.' She's lucky she doesn't have to deal with the keeper."
+The hogtooth tavern is a Saffi-familiar subject. The thought is "Hogtooth has been your go-to tavern for decades. You appreciate the somewhat quieter clientele and the rotation of minstrels providing a variety of musical talent. The ale's not bad, either. And all of that makes up for the grumpy barkeep." The Saffi-thought is "'I like this place. It's warm and cozy, but not too cramped.' She's lucky she doesn't have to deal with the keeper."
 
-The dragon is a familiar subject. Understand "dragons" as the dragon. The thought is "[if the dragon attack has happened]Massive beasts of scale and fire. Why are you thinking about them now?[otherwise]Probably some wizard's trick. Dragons are nothing more than legend." The Saffi-thought is "She laughs nervously. 'Nah, that wasn't a dragon. It was... something else. Dragons aren't real.'"
+The dragon is a subject. Understand "dragons" as the dragon. The thought is "[if the dragon attack has happened]Massive beasts of scale and fire. Why are you thinking about them now?[otherwise]Probably some wizard's trick. Dragons are nothing more than legend." The Saffi-thought is "She laughs nervously. 'Nah, that wasn't a dragon. It was... something else. Dragons aren't real.'"
 
 Book - The Barkeep
 
@@ -644,7 +646,7 @@ The mug is an unpaid purchasable liquid container. The coin value is 2. The shop
 Beverage is a familiar subject. Understand "drink", "mug", "ale", "beer", "booze" as beverage.
 Instead of quizzing the barkeep about a beverage:
 	if the mug is on the bar and the mug is unpaid:
-		say "'Ey!' The barkeep points at the mug on the bar. 'Pay er that one first, will ye?'";
+		say "'Ey!' The barkeep points at the mug on the bar. 'Pay fer that one first, will ye?'";
 	otherwise:
 		if the mug is nowhere:
 			say "The barkeep pulls a mug of ale and pounds it on the counter. 'Two copper,' he says.";
@@ -656,6 +658,7 @@ Instead of quizzing the barkeep about a beverage:
 			otherwise:
 				say "He grabs the mug out of your hand, fills it up, and slides it along the bar. 'Two copper.'";
 				now the mug is unpaid;
+				now the mug is on the bar;
 		otherwise:
 			say "He raises a sharp eyebrow. 'Does it look like I've an endless supply of mugs? Bring it back and I'll get yer refill."
 Instead of taking the mug when the mug is unpaid:
