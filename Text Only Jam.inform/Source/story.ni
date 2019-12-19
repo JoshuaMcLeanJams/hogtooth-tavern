@@ -205,10 +205,10 @@ Carry out thinking: try pondering.
 Report pondering:
 	say "You stop and think for a moment, but nothing specific comes to mind. Maybe you need a HINT or to PONDER ABOUT something."
 
-Thinking about is an action applying to one thing. Understand "ponder [any thing]" and "think about [any thing]" as thinking about.
-Report thinking about something unknown:
-	say "[no thought]".
-Report thinking about something known:
+Thinking about is an action applying to one object. Understand "ponder [something]" and "think about [something]" as thinking about.
+Check thinking about something:
+	if the noun is unknown, say "[no thought]" instead.
+Report thinking about something:
 	if the thought of the noun is "":
 		if the noun is visible:
 			try examining the noun;
@@ -224,9 +224,9 @@ Report pondering about:
 To say no thought:
 	say "No specific memories come to mind."
 
-A thing has some text called the thought.
+Every object has some text called the thought.
 
-To add thought (addend - text) to (target - thing):
+To add thought (addend - text) to (target - object):
 	if the thought of the target is "":
 		now the thought of the target is addend;
 	otherwise:
@@ -428,9 +428,16 @@ Understand "goodbye [someone]" and "bye [someone]" as saying goodbye to.
 
 Responding is an action applying to one topic. Understand "respond [text]" as responding. Report responding: say "Try the format [b]ANSWER (response) TO (person)[/b] or [b](person), (response)[/b] instead."
 
-Every thing has some text called Saffi-thought. The Saffi-thought is usually "". 
+Every object has some text called Saffi-thought. The Saffi-thought is usually "". 
 
-Every thing can be Saffi-familiar. A thing is usually not Saffi-familiar.
+To add Saffi-thought (addend - text) to (target - object):
+	if the Saffi-thought of the target is "":
+		now the Saffi-thought of the target is addend;
+	otherwise:
+		let current-text be the Saffi-thought of the target;
+		now the Saffi-thought of the target is "[current-text] [addend]".
+
+Every object can be Saffi-familiar. An object is usually not Saffi-familiar.
 
 To decide whether (target - a thing) is Saffi-known:
 	if the location of the target is the location of Saffi, yes;
