@@ -261,6 +261,34 @@ Instead of inserting an important thing into a container (called the con) which 
 
 Part - World Simulation
 
+Chapter - Purchasing
+
+A thing called the coin purse is carried by the player. It has a number called the coin count. The coin count is 10. The description is "A small purse with [coin count] coins."
+
+The block buying rule is not listed in any rulebook.
+Check buying something:
+	say "Try asking about [the noun] instead."
+
+Paying to them is an action applying to one visible thing. Understand "pay [something]" as paying to them.
+Paying for it is an action applying to one visible thing. Understand "pay for [something]" as paying for it.
+
+A shopkeeper is a kind of person. A shopkeeper has a number called the expected payment. A shopkeeper can be expecting pay. A shopkeeper is usually not expecting pay.
+
+A thing can be purchasable. Every thing has a number called the coin value. The coin value of a thing is usually 1. Every thing can be paid or unpaid. A thing is usually paid. Every thing has a person called the shop owner.
+
+Check paying for it:
+	if the noun is not purchasable or the noun is paid:
+		say "You don't need to pay for [the noun].";
+	otherwise:
+		if the player is not carrying the coin purse:
+			say "You need a coin purse to pay for [the noun].";
+		otherwise if the coin count of the coin purse is less than the coin value of the noun:
+			say "You don't have enough to pay for [the noun].";
+		otherwise:
+			decrease the coin count of the coin purse by the coin value of the noun;
+			say "You give [coin value of the noun] coins to [shop owner of the noun] to pay for [the noun].";
+			now the noun is paid.
+
 Chapter - Instruments
 
 An instrument is a kind of thing.
@@ -318,7 +346,33 @@ After dropping:
 
 Chapter - Liquids
 
-A liquid is a kind of thing. Instead of taking a liquid, say "You need a container to hold that."
+A liquid container is a kind of container. A liquid container can be empty or full. Every liquid container has some text called the liquid.
+
+After examining a liquid container:
+	if the noun is full:
+		say "Inside [the noun] is [the liquid of the noun].";
+	otherwise:
+		say "[The noun] is empty.";
+	continue the action.
+	
+Carry out emptying a liquid container:
+	if the noun is empty:
+		say "You turn [the noun] upside down but nothing comes out. It's already empty.";
+	otherwise:
+		say "You dump [the liquid of the noun] from [the noun] onto the ground, where it's quickly absorbed.";
+		now the noun is empty.
+		
+The block drinking rule is not listed in any rulebook.
+
+Check drinking something:
+	if the noun is not a liquid container, say "You can't drink that." instead;
+	if the noun is empty, say "[The noun] is empty. Nothing to drink in there." instead.
+		
+Carry out drinking something:
+	now the noun is empty.
+	
+Report drinking something:
+	say "You drink [the liquid of the noun] from [the noun]. Tasty!".
 
 Chapter - Furniture
 
@@ -353,14 +407,10 @@ Chapter - Emptying
 Emptying is an action applying to one thing. Understand "empty [something]" and "pour [something] out" as emptying.
 Check emptying something:
 	if the noun is not a container, say "You can't empty that."
-Carry out emptying something:
+Carry out emptying something when the noun is not a liquid container:
 	say "You empty [the noun] onto the floor, dumping [list of things in the noun].";
 	repeat with item running through things in the noun:
-		if the item is a liquid:
-			say "The ground quickly absorbs the liquid.";
-			remove the item from play;
-		otherwise:
-			move item to the location.
+		move item to the location.
 
 Chapter - Using
 
@@ -415,49 +465,11 @@ A scenery desk called the long table is here. The description is "Shoved against
 
 Scenery desks called the tables are here. The description is "A table of thick wood cut haphazardly, seating four."
 
-A chair called Saffi-chair is in here. The printed name is "Saffi's chair".
+A chair called Saffi-chair is here. The printed name is "Saffi's chair".
 
 A chair called Player-chair is here. The printed name is "your chair".
 
 A scenery desk called the bar is here.
-
-[Barkeep]
-
-A man called the barkeep is here. "A stout, round man with curly black hair peeking over the top of his doublet wipes down the bar with a rag." The unknown-name is "barkeep".
-
-He has a number called the frustration. The frustration is 0.
-
-Before going north from the main hall when the barkeep is in the main hall:
-	if the frustration of the barkeep is less than 3:
-		say "[one of]The barkeep puts a hand up to stop you getting behind the bar. 'No patrons behind the bar,' he says. 'Can I get somethin' for ye?'[or]The barkeep stops you again. He's clearly getting annoyed. 'Stay on that side, please.'[or]'Okay, one more attempt and ye'll be booted to the streets!'[stopping]";
-		increase the frustration of the barkeep by one;
-		stop the action;
-	otherwise:
-		say "The barkeep grabs you by the throat of your doublet and drags you through the hall, booting you onto the streets. 'No more business for ye!' he shouts before slamming the door.[paragraph break]";
-		say "You get up and brush yourself off. A strange roaring sound echoes overhead, and you have just enough time to look up and recognize the dragon before its flame engulfs you.";
-		end in death.
-
-[Minstrel]
-
-A man called the Minstrel is here. "A man with shoulder-cropped blond hair strums on a lute and sings a wordless tune, filling the empty tavern air above the many conversations with beautiful music."
-
-The unknown-name is "minstrel".
-
-The description is "He appears to be enjoying himself immensely. You wonder whether he truly is, as most of the patrons ignore his hardworked talent in favor of their companions and ale."
-
-He carries an instrument called the lute.
-
-Instead of quizzing the minstrel about something:
-	stop minstrel interruption instead.
-	
-Instead of telling the minstrel about something:
-	stop minstrel interruption instead.
-	
-Instead of saying hello to the minstrel:
-	stop minstrel interruption instead.
-
-To stop minstrel interruption:
-	say "You wouldn't dare interrupt his beautiful music." instead.
 
 Chapter - The Cloakroom
 
@@ -553,7 +565,15 @@ A seen, familiar, introduced woman called Saffi is on Saffi-chair. "Your wife, S
 
 The description is "Your wife - a woman with long, flowing light purple hair and a quirky smile which brightens the worst of days."
 
-She is seated. Understand "my wife" and "wife", "purple woman", "purple hair", and "armored woman" as Saffi.
+She is seated. Understand "my wife" and "wife", "purple woman", and "purple hair" as Saffi.
+
+After going a direction when the dragon attack has happened:
+	if Saffi is seated:
+		try Saffi exiting;
+	if the location of Saffi is not the location of the player:
+		let the way be the best route from the location of Saffi to the location of the player, using doors;
+		try Saffi going the way;
+		continue the action.
 
 Chapter - Saffi Thoughts
 
@@ -566,10 +586,10 @@ Chapter - Conversation
 Part - Hello
 
 After saying hello to Saffi when the greeting type is explicit:
-	say "[one of]'Hey,' she says.[or]She looks at you.[stopping]"
+	say "She looks at you."
 
 After saying hello to Saffi when the greeting type is implicit:
-	say "'Hey,' she says. [run paragraph on]".
+	say "She looks at you. [run paragraph on]".
 
 Part - Using Thoughts
 
@@ -595,16 +615,109 @@ After informing Saffi about a thing (called the target):
 Part - Goodbye
 
 After saying goodbye to Saffi when the farewell type is explicit:
-	say "'Stay safe.'"
+	if the dragon attack has happened:
+		say "'What? No, you're not leaving me.'";
+	otherwise:
+		say "'Stay safe.'"
 
 After saying goodbye to Saffi when the farewell type is implicit:
-	say "'Don't go too far,' Saffi says.[paragraph break]"
+	if the dragon attack has not happened:
+		say "'Don't go too far,' Saffi says.[paragraph break]";
+	otherwise:
+		stop the action.
 
 Part - Subjects
 
-The hogtooth tavern is a familiar Saffi-familiar subject. Understand "tavern" and "hogtooth" as the hogtooth tavern. The Saffi-thought is "'I like this place. It's warm and cozy, but not too cramped.'"
+The hogtooth tavern is a familiar Saffi-familiar subject. The thought is "Hogtooth has been your go-to tavern for decades. You appreciate the somewhat quieter clientele and the rotation of minstrels providing a variety of musical talent. The ale's not bad, either. And all of that makes up for the grumpy barkeep." The Saffi-thought is "'I like this place. It's warm and cozy, but not too cramped.' She's lucky she doesn't have to deal with the keeper."
 
-Volume - Events
+The dragon is a familiar subject. Understand "dragons" as the dragon. The thought is "[if the dragon attack has happened]Massive beasts of scale and fire. Why are you thinking about them now?[otherwise]Probably some wizard's trick. Dragons are nothing more than legend." The Saffi-thought is "She laughs nervously. 'Nah, that wasn't a dragon. It was... something else. Dragons aren't real.'"
+
+Book - The Barkeep
+
+A male shopkeeper called the barkeep is in the main hall. Understand "keeper", "barkeeper", and "bar keeper" as the barkeep. "A stout, round man with curly black hair peeking over the top of his doublet wipes down the bar with a rag.[if the mug is on the bar and the mug is unpaid] He's waiting for you to pay for your ale.[end if][if the mug is on the bar and the mug is paid] He's waiting for you to take your ale." The unknown-name is "barkeep".
+
+The thought is "He's a grumpy man with a short temper, but that's also why the atmosphere here is so nice. He won't allow any nonsense." The Saffi-thought is "'You always tell me he's in a mood, but I don't know. Maybe you just need to get to know him better.'"
+
+Chapter - Buying Ale
+
+The mug is an unpaid purchasable liquid container. The coin value is 2. The shop owner is the barkeep. The liquid is "ale". Understand "drink", "ale", "beer", "beverage", and "booze" as the mug.
+Beverage is a familiar subject. Understand "drink", "mug", "ale", "beer", "booze" as beverage.
+Instead of quizzing the barkeep about a beverage:
+	if the mug is on the bar and the mug is unpaid:
+		say "'Ey!' The barkeep points at the mug on the bar. 'Pay er that one first, will ye?'";
+	otherwise:
+		if the mug is nowhere:
+			say "The barkeep pulls a mug of ale and pounds it on the counter. 'Two copper,' he says.";
+			now the mug is on the bar;
+			now the mug is unpaid;
+		otherwise if the mug is carried by the player:
+			if the mug is full:
+				say "'How about ye finish that one first, lad?' He points at the full mug in your hand.";
+			otherwise:
+				say "He grabs the mug out of your hand, fills it up, and slides it along the bar. 'Two copper.'";
+				now the mug is unpaid;
+		otherwise:
+			say "He raises a sharp eyebrow. 'Does it look like I've an endless supply of mugs? Bring it back and I'll get yer refill."
+Instead of taking the mug when the mug is unpaid:
+	say "'Ey! Pay for it first. I'll have no thieves here.'"
+
+Chapter - Conversation
+
+Instead of saying hello to the barkeep when the player is seated:
+	stop shouting at the barkeep.
+Instead of quizzing the barkeep about something when the player is seated:
+	stop shouting at the barkeep.
+To stop shouting at the barkeep:
+	say "You ought to get out of your chair first. He'll throw you out for shouting across the room."
+
+Instead of quizzing the barkeep about something:
+	stop barkeep interruption instead.
+Instead of telling the barkeep about something:
+	stop barkeep interruption instead.
+Instead of saying hello to the barkeep:
+	say "The barkeep looks at you expectantly.";
+	continue the action.
+	
+To stop barkeep interruption:
+	say "'Don't care much fer talkin. Ye want a drink?'".
+
+Chapter - Stop Entering the Bar
+
+The barkeep has a number called the frustration. The frustration is 0.
+
+Before going north from the main hall when the barkeep is in the main hall:
+	if the frustration of the barkeep is less than 3:
+		say "[one of]The barkeep puts a hand up to stop you getting behind the bar. 'No patrons behind the bar,' he says. 'Can I get somethin for ye?'[or]The barkeep stops you again. He's clearly getting annoyed. 'Stay on that side, please.'[or]'Okay, one more try and ye'll be booted to the streets!'[stopping]";
+		increase the frustration of the barkeep by one;
+		stop the action;
+	otherwise:
+		say "The barkeep grabs you by the throat of your doublet and drags you through the hall, booting you onto the streets. 'No more business for ye!' he shouts before slamming the door.[paragraph break]";
+		say "You get up and brush yourself off. A strange roaring sound echoes overhead, and you have just enough time to look up and recognize the dragon before its flame engulfs you.";
+		end in death.
+
+Book - The Minstrel
+
+A man called the Minstrel is in the main hall. "A man with shoulder-cropped blond hair strums on a lute and sings a wordless tune, filling the empty tavern air above the many conversations with beautiful music."
+
+The unknown-name is "minstrel".
+
+The description is "He appears to be enjoying himself immensely. You wonder whether he truly is, as most of the patrons ignore his hardworked talent in favor of their companions and ale."
+
+He carries an instrument called the lute.
+
+Instead of quizzing the minstrel about something:
+	stop minstrel interruption instead.
+	
+Instead of telling the minstrel about something:
+	stop minstrel interruption instead.
+	
+Instead of saying hello to the minstrel:
+	stop minstrel interruption instead.
+
+To stop minstrel interruption:
+	say "You wouldn't dare interrupt his beautiful music." instead.
+
+Volume - Events and Scenes
 
 Chapter - Time
 
@@ -623,14 +736,16 @@ To decide whether it is daytime:
 
 Book - The Dragon Attack
 
-The dragon attack is a scene. The dragon attack begins when the time of day is 6:24 PM.
+The dragon attack is a scene. The dragon attack begins when the time of day is after 6:24 PM.
 
 When the dragon attack begins:
+	now the dragon is Saffi-familiar;
 	if the player is in the cloakroom, run the cloakroom dragon attack;
 	otherwise run the main hall dragon attack.
 	
 To run the cloakroom dragon attack:
 	say "A deafening roar comes from outside. Worried for Saffi's safety, you dart back into the main hall.[paragraph break]";
+	now the player is in the main hall;
 	run the core dragon attack.
 
 To run the main hall dragon attack:
