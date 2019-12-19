@@ -83,10 +83,15 @@ Check saving the game: increment the number of saves.
 
 Book - Meta Content
 
-Part - The Score
+Part - The Score and Endings
 
 The maximum score is 17.
-When play ends:
+
+To end in death:
+	say "It's a shame things had to end this way.";
+	end the story finally.
+
+To end in victory:
 	if the turn count is less than 100:
 		say "[br](Bonus point for a speedy finish!)";
 		increment the score;
@@ -115,7 +120,7 @@ When play begins:
 	now description entry is "Originally developed for the 8 Bits to Infinity Text Only Jam from December 13-20, 2019, Bardolf's Curse is a location-based, puzzle-focused piece of interactive fiction--or, as the author prefers, a text adventure."
 
 Table of Basic Help Options (continued)
-title	description
+title	description	
 "Additional commands"	"Conversation and remembrance are two key parts of this adventure.
 
 You can TALK TO (person) to initiate conversation, then ASK ABOUT (something). A shortcut is to ASK (person) ABOUT (something) which will initiate conversation and ask about the topic.
@@ -213,7 +218,7 @@ Report thinking about something known:
 
 Report pondering about:
 	say "[no thought]".
-	
+
 To say no thought:
 	say "No specific memories come to mind."
 
@@ -233,7 +238,7 @@ A person can be introduced. A person is usually not introduced. The player is in
 A person has text called the unknown-name. The unknown-name is usually "a person".
 
 Rule for printing the name of a person who is not introduced (called the target):
-	say "[the unknown-name of the target]".
+	say "[unknown-name of the target]".
 
 Chapter - The Magic Word
 
@@ -255,6 +260,18 @@ Instead of dropping an important thing, you should keep that.
 Instead of inserting an important thing into a container (called the con) which is not held by the player, say "Better keep that out, just in case."
 
 Part - World Simulation
+
+Chapter - Instruments
+
+An instrument is a kind of thing.
+
+Playing it is an action applying to one carried thing. Understand "play [something]" as playing it.
+
+Check playing it when the noun is not an instrument:
+	say "You can only play an instrument." instead.
+
+Report playing it:
+	say "You play [the noun] to beautiful effect."
 
 Chapter - Clothes
 
@@ -351,13 +368,22 @@ Using it on is an action applying to two visible things. Understand "use [someth
 Check using it on:
 	say "You can't use [the noun] on [the second noun]."
 
-Book - Conversation
+Book - Conversation and Other Characters' Thoughts
 
 Understand "hello [someone]" and "hi [someone]" and "hey [someone]"as saying hello to.
 
 Understand "goodbye [someone]" and "bye [someone]" as saying goodbye to.
 
 Responding is an action applying to one topic. Understand "respond [text]" as responding. Report responding: say "Try the format [b]ANSWER (response) TO (person)[/b] or [b](person), (response)[/b] instead."
+
+Every thing has some text called Saffi-thought. The Saffi-thought is usually "". 
+
+Every thing can be Saffi-familiar. A thing is usually not Saffi-familiar.
+
+To decide whether (target - a thing) is Saffi-known:
+	if the location of the target is the location of Saffi, yes;
+	if the thing is Saffi-familiar, yes;
+	no.
 
 Volume - Hints
 
@@ -379,63 +405,83 @@ Chapter - The Main Hall
 
 The Main Hall is a room. "This hall lit dimly by rows after row of candles along the walls features a large benched table to the south and several round tables with chairs in the center. Along the north wall runs a bar, and a passage west leads to the cloakroom and the tavern's exit."
 
-A tavern chair is a kind of chair. It is scenery. The description is "It's an ordinary wooden chair. Not cozy, but with a few mugs of ale down, it's less of an issue."
+[Furniture]
 
-A tavern bench is a kind of chair. It is scenery. The description is "A lengthy plank with regular tall stumps to prop it up from the floor. Too close to the ground for your comfort. You always prefer the chairs."
+Things called the chairs are here. Understand "chair" as the chairs. They are scenery. The description is "It's an ordinary wooden chair. Not cozy, but with a few mugs of ale down, it's less of an issue."
 
-A tavern chair called Saffi-chair is here. The printed name is "a chair".
+A scenery chair called the bench is here. The description is "A lengthy plank with regular tall stumps to prop it up from the floor. Too close to the ground for your comfort, and with no back. Chairs are the superior place to sit."
 
-15 tavern chairs are here. Two tavern benches are here.
+A scenery desk called the long table is here. The description is "Shoved against the southern wall is a grand table with a long bench, filled with random patrons."
 
-A scenery desk called the long table is here. The description is "Nestled against the southern wall is a grand table with long benches, a sort of secondary seated bar, with random patrons carving their own little spots."
+Scenery desks called the tables are here. The description is "A table of thick wood cut haphazardly, seating four."
 
-A tavern table is a kind of desk. It is scenery. The description is "A table of thick wood cut haphazardly, seating four."
+A chair called Saffi-chair is in here. The printed name is "Saffi's chair".
 
-Three tavern tables are here.
+A chair called Player-chair is here. The printed name is "your chair".
 
-The bar is here. It is scenery.
+A scenery desk called the bar is here.
+
+[Barkeep]
+
+A man called the barkeep is here. "A stout, round man with curly black hair peeking over the top of his doublet wipes down the bar with a rag." The unknown-name is "barkeep".
+
+He has a number called the frustration. The frustration is 0.
+
+Before going north from the main hall when the barkeep is in the main hall:
+	if the frustration of the barkeep is less than 3:
+		say "[one of]The barkeep puts a hand up to stop you getting behind the bar. 'No patrons behind the bar,' he says. 'Can I get somethin' for ye?'[or]The barkeep stops you again. He's clearly getting annoyed. 'Stay on that side, please.'[or]'Okay, one more attempt and ye'll be booted to the streets!'[stopping]";
+		increase the frustration of the barkeep by one;
+		stop the action;
+	otherwise:
+		say "The barkeep grabs you by the throat of your doublet and drags you through the hall, booting you onto the streets. 'No more business for ye!' he shouts before slamming the door.[paragraph break]";
+		say "You get up and brush yourself off. A strange roaring sound echoes overhead, and you have just enough time to look up and recognize the dragon before its flame engulfs you.";
+		end in death.
+
+[Minstrel]
+
+A man called the Minstrel is here. "A man with shoulder-cropped blond hair strums on a lute and sings a wordless tune, filling the empty tavern air above the many conversations with beautiful music."
+
+The unknown-name is "minstrel".
+
+The description is "He appears to be enjoying himself immensely. You wonder whether he truly is, as most of the patrons ignore his hardworked talent in favor of their companions and ale."
+
+He carries an instrument called the lute.
+
+Instead of quizzing the minstrel about something:
+	stop minstrel interruption instead.
+	
+Instead of telling the minstrel about something:
+	stop minstrel interruption instead.
+	
+Instead of saying hello to the minstrel:
+	stop minstrel interruption instead.
+
+To stop minstrel interruption:
+	say "You wouldn't dare interrupt his beautiful music." instead.
 
 Chapter - The Cloakroom
 
 The Cloakroom is west of the Main Hall.
 
-A door called the entry door is south of the cloakroom.
+A door called the entry door is south of the cloakroom. The thought is "The night has only just begun! Why think of leaving?" The Saffi-thought is "'Did you want to leave? Seems a bit early.'"
 
 Instead of opening the entry door, say "You'd best not."
-
-Chapter - The Bar
-
-Before going north from the main hall, say "You walk around the bar to get behind it."
-
-A room called Behind-the-Bar is north of the main hall. The printed name is "Behind the Bar".
 
 Chapter - The Kitchen
 
 The Kitchen is north of the kitchen door.
 
-A door called the kitchen door is north of behind-the-bar and south of the kitchen. "A wooden door [if closed]is [end if]set [if the player is in the kitchen]in the southern wall[otherwise if the player is in behind-the-bar]behind the bar[end if][if open] lies open[end if]."
+A door called the kitchen door is north of the main hall and south of the kitchen. "A wooden door [if closed]is [end if]set [if the player is in the kitchen]in the southern wall[otherwise if the player is in the main hall]behind the bar[end if][if open] lies open[end if]."
 
 A door called the trapdoor is down from the kitchen.
 
 After going north to the kitchen:
-	try silently closing the kitchen door;
-	if the kitchen door is open, continue the action;
-	say "You step through into the kitchen and close the door behind yourself.";
-	continue the action.
-
-After going south to behind-the-bar:
-	try silently closing the kitchen door;
-	if the kitchen door is open, continue the action;
-	say "You step through to the main hall, behind the bar, and close the door.";
+	say "You go around the bar into the kitchen.";
 	continue the action.
 	
 Chapter - The Cellar
 
 The Cellar is down from the trapdoor.
-
-Chapter - Tavern Generalities
-
-The Main Hall, the Cloakroom, Behind-the-Bar, the Kitchen, and the Cellar are in a region called the Tavern.
 
 Book - Main Game (The Dungeon)
 
@@ -454,10 +500,6 @@ Instead of entering the portal:
 	
 Instead of inserting something (called the item) into the portal:
 	now the item is in the ruined courtyard.
-	
-Chapter - Dungeon Generalities
-
-The Portal Room is in a region called the Dungeon.
 
 Book - Endgame (Castle Aeremanth Ruins)
 
@@ -487,17 +529,13 @@ Chapter - Chapel
 
 The Chapel is north of the ruined courtyard.
 
-Chapter - Castle Ruins Generalities
-
-The Ruined Courtyard and the Chapel are in a region called Castle Aeremanth Ruins.
-
 Volume - Characters
 
 Book - Player (Ernis Rainard)
 
 Chapter - Description
 
-The player is a person called Ernis Raynard. He is in the main hall. The description is "You're a shadow of your former adventurous self, but five years of running your own shop have mellowed any nostalgia for the life of a squire."
+The player is a person called Ernis Raynard. He is on the player-chair. He is seated. The description is "You're a shadow of your former adventurous self, but five years of running your own shop have mellowed any nostalgia for the life of a squire."
 
 Chapter - Thoughts
 
@@ -507,36 +545,64 @@ The king offered you a position on his Kingsguard, but you refused. That adventu
 
 Nine years later, you now run your own shop with a number of regular patrons and hardworking employees. It's much cozier than getting yourself killed like Galien did - and you don't miss the adventure. Not one bit."
 
+The player is Saffi-familiar. The Saffi-thought of the player is "'Really? Is this the time for insecurity?'"
+
 Book - Saffi
 
-A seen, familiar, introduced woman called Saffi is on Saffi-chair. "[if seated]Saffi is sitting on [location].[otherwise]Your wife, Saffi, is here." She is seated. Understand "my wife" and "wife", "purple woman", "purple hair", and "armored woman" as Saffi.
+A seen, familiar, introduced woman called Saffi is on Saffi-chair. "Your wife, Saffi, is here."
+
+The description is "Your wife - a woman with long, flowing light purple hair and a quirky smile which brightens the worst of days."
+
+She is seated. Understand "my wife" and "wife", "purple woman", "purple hair", and "armored woman" as Saffi.
+
+Chapter - Saffi Thoughts
+
+Saffi is Saffi-familiar. The Saffi-thought is "[one of]'Funny. We've only been married six years.' She rolls her eyes.[or]'Okay.' She puts her arms akimbo. 'What would you like to know?'[or]She releases an aggravated sigh. 'This is getting old.'[or]Waving her hands in the air, she says, 'I'm the queen of the world. Is that what you want?'[or]'If you haven't figured it out yet, you'll never figure it out.'[or]There is no response.[stopping]"
 
 The thought of Saffi is "You married Saffi six years ago, right before opening up your own shop. She's been your constant companion ever since. The two of you have been waiting for the shop to stabilize before starting a family, and you're right on the cusp of it. Maybe next year."
 
+Chapter - Conversation
+
+Part - Hello
+
 After saying hello to Saffi when the greeting type is explicit:
-	say "'Hey,' she says."
-	
+	say "[one of]'Hey,' she says.[or]She looks at you.[stopping]"
+
 After saying hello to Saffi when the greeting type is implicit:
 	say "'Hey,' she says. [run paragraph on]".
 
-After quizzing Saffi about the player, say "'Really? Is this the time for insecurity?'"
+Part - Using Thoughts
 
-After quizzing Saffi about Saffi:
-	say "[one of]'Funny. We've only been married six years.' She rolls her eyes.[or]'Okay.' She puts her arms akimbo. 'What would you like to know?'[or]She releases an aggravated sigh. 'This is getting old.'[or]Waving her hands in the air, she says, 'I'm the queen of the world. Is that what you want?'[or]'If you haven't figured it out yet, you'll never figure it out.'[or]There is no response.[stopping]"
+Instead of quizzing Saffi about a thing (called the target):
+	if the target is Saffi-known:
+		if the Saffi-thought of the target is "":
+			continue the action;
+		say "[Saffi-thought of the target][paragraph break]";
+	otherwise:
+		say "'I don't know anything about that,' She says."
+
+After informing Saffi about a thing (called the target):
+	if the target is the player:
+		try quizzing Saffi about the player;
+	otherwise if the target is Saffi:
+		say "'Yes, I love you too.'";
+	otherwise if the target is Saffi-known:
+		say "'I already know about [the target],' she says. [Saffi-thought of the target][paragraph break]";
+	otherwise:
+		now the target is Saffi-familiar;
+		say "'Ah, [the target]. I'll remember that.'"
+
+Part - Goodbye
 
 After saying goodbye to Saffi when the farewell type is explicit:
 	say "'Stay safe.'"
 
 After saying goodbye to Saffi when the farewell type is implicit:
-	say "'Don't go too far,' Saffi says"
+	say "'Don't go too far,' Saffi says.[paragraph break]"
 
-Book - Rale the Smart, Posturing Ranger
+Part - Subjects
 
-A man called Rale is in the tunnel. The unknown-name is "a short man with an enormous bow". Understand "man" and "short man" and "bowman" and "bow man" as Rale.
-
-[Book - Tira the Self-Righteous Wizard
-
-A woman called Tira is in the tunnel. The unknown-name is "a tall woman in thin robes". Understand "woman" and "tall woman" and "robed woman" as Tira.]
+The hogtooth tavern is a familiar Saffi-familiar subject. Understand "tavern" and "hogtooth" as the hogtooth tavern. The Saffi-thought is "'I like this place. It's warm and cozy, but not too cramped.'"
 
 Volume - Events
 
@@ -557,8 +623,27 @@ To decide whether it is daytime:
 
 Book - The Dragon Attack
 
-At 6:24 PM:
-	say "[200 secs]The dragon attacks."
+The dragon attack is a scene. The dragon attack begins when the time of day is 6:24 PM.
+
+When the dragon attack begins:
+	if the player is in the cloakroom, run the cloakroom dragon attack;
+	otherwise run the main hall dragon attack.
+	
+To run the cloakroom dragon attack:
+	say "A deafening roar comes from outside. Worried for Saffi's safety, you dart back into the main hall.[paragraph break]";
+	run the core dragon attack.
+
+To run the main hall dragon attack:
+	say "A deafening roar blasts through the cacaphony of voices and the minstrel's music, causing all to stop and fall silent. Seconds pass with patrons exchanging looks of fear and confusion.[paragraph break]";
+	run the core dragon attack.
+	
+To run the core dragon attack:
+	say "A column of fire blasts through the cloakroom and it's gone in an instant, now a pile of smoldering ash and sparks. The silence gives way to screams and panic as each person jumps from their seat.[paragraph break]";
+	say "Something massive and scaled zooms by the gaping hole into the streets where the cloakroom once was. A dragon? No, impossible.[paragraph break]";
+	say "Everyone takes their chance to flee through the enlarged exit, and soon the room is silent again. Only you, Saffi, and the minstrel's lute remain. She looks at you as if asking what to do next.[200 sec]";
+	now the barkeep is in the cellar;
+	now the lute is in the main hall;
+	now the minstrel is in the ruined courtyard.
 
 Volume - Hint Management
 

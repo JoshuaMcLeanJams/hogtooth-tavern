@@ -54,5 +54,5 @@ template path "C:\Users\secid\Documents\Inform\Templates"
 template path "C:\Program Files (x86)\Inform 7\Internal\Templates"
 css
 website "Standard"
-status instruction ||&nbsp;<a href="source:story.ni#line109"><img border=0 src=inform:/doc_images/Reveal.png></a>||
+status instruction ||&nbsp;<a href="source:story.ni#line114"><img border=0 src=inform:/doc_images/Reveal.png></a>||
 status alternative ||Using 'Release along with cover art', to provide something more distinctive than the default artwork above&nbsp;<a href=inform:/doc403.html><img border=0 src=inform:/doc_images/help.png></a>||
