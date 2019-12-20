@@ -83,15 +83,11 @@ Check saving the game: increment the number of saves.
 
 Book - Meta Content
 
-Part - The Score and Endings
+Part - The Score
 
 The maximum score is 17.
 
-To end in death:
-	say "It's a shame things had to end this way.";
-	end the story finally.
-
-To end in victory:
+To calculate bonus points:
 	if the turn count is less than 100:
 		say "[br](Bonus point for a speedy finish!)";
 		increment the score;
@@ -469,7 +465,7 @@ The Main Hall is a room. "This hall lit dimly by rows after row of candles along
 
 [Furniture]
 
-Things called the chairs are here. Understand "chair" as the chairs. They are scenery. The description is "It's an ordinary wooden chair. Not cozy, but with a few mugs of ale down, it's less of an issue."
+Things called the chairs are here. Understand "chair" as the chairs. They are scenery. 
 
 A scenery chair called the bench is here. The description is "A lengthy plank with regular tall stumps to prop it up from the floor. Too close to the ground for your comfort, and with no back. Chairs are the superior place to sit."
 
@@ -477,11 +473,19 @@ A scenery desk called the long table is here. The description is "Shoved against
 
 Scenery desks called the tables are here. The description is "A table of thick wood cut haphazardly, seating four."
 
-A chair called Saffi-chair is here. The printed name is "Saffi's chair".
+A proper-named chair called the Saffi-chair is here. The printed name is "Saffi's chair".  The indefinite article is "Saffi's".
 
-A chair called Player-chair is here. The printed name is "your chair".
+A proper-named chair called the Player-chair is here. The printed name is "your chair". Understand "mine" and "my chair" as the Player-chair. The indefinite article is "your". 
+Instead of thinking about a chair:
+	say "It's a chair. Were you expecting some deep thoughts?"
+Instead of examining a chair:
+	say "It's an ordinary wooden chair. Not cozy, but with a few mugs of ale down, it's less of an issue."
 
-A scenery desk called the bar is here.
+A scenery desk called the bar is here. The description is "The bar runs from the west wall to the east wall except for a small curve on the east side and a slight opening. This allows the barkeep to come out and stop any scufflues, rare as they are. All you need is the right look from the barkeeper and you'll stop whatever you're doing." The thought is "It's where the barkeep puts his drinks. Nothing special."
+
+[Other Descriptive Items]
+
+A scenery thing called the candles are here. Understand "candle" as the candles. The description is "Dozens if not hundreds of candles in broken or misshapen mugs fight back the darkness with their flickering light." The thought is "The reuse of mugs for the candles is a clever trick, adding a unique decoration to the place. Probably saves on candle jars, too." The Saffi-thought is "'I don't know about them. The candlelight is nice, but those steel mugs just aren't aesthetic at all."
 
 Chapter - The Cloakroom
 
@@ -589,6 +593,12 @@ After going a direction when the dragon attack has happened:
 
 Chapter - Saffi Thoughts
 
+Instead of quizzing Saffi about Saffi when the dragon attack has happened:
+	say "I'm okay, but let's get out of here."
+	
+Instead of quizzing Saffi about a chair:
+	say "Her left eyebrow rises, ever so slightly."
+
 Saffi is Saffi-familiar. The Saffi-thought is "[one of]'Funny. We've only been married six years.' She rolls her eyes.[or]'Okay.' She puts her arms akimbo. 'What would you like to know?'[or]She releases an aggravated sigh. 'This is getting old.'[or]Waving her hands in the air, she says, 'I'm the queen of the world. Is that what you want?'[or]'If you haven't figured it out yet, you'll never figure it out.'[or]There is no response.[stopping]"
 
 The thought of Saffi is "You married Saffi six years ago, right before opening up your own shop. She's been your constant companion ever since. The two of you have been waiting for the shop to stabilize before starting a family, and you're right on the cusp of it. Maybe next year."
@@ -656,7 +666,7 @@ To say the barkeep description:
 	If the dragon attack has happened:
 		say "The barkeep is huddled in the corner here, his hands over his head.";
 	otherwise:
-		say "A stout, round man with curly black hair peeking over the top of his doublet [if the mug is not on the bar]wipes down the bar with a rag[otherwise if the mug is unpaid]waits for you to pay for your ale[otherwise] waits for you to take your ale[end if]."
+		say "A stout, round man with curly black hair peeking over the top of his shirt. He's [if the mug is not on the bar]wiping down the bar with a rag[otherwise if the mug is unpaid]waiting for you to pay for your ale[otherwise]waiting for you to take your ale[end if]."
 The thought is "He's a grumpy man with a short temper, but that's also why the atmosphere here is so nice. He won't allow any nonsense." The Saffi-thought is "'You always tell me he's in a mood, but I don't know. Maybe you just need to get to know him better.'"
 
 Chapter - Buying Ale
@@ -746,6 +756,22 @@ To stop minstrel interruption:
 		say "He ignores your words with blank eyes. Is he in some sort of daze?"
 
 Volume - Events and Scenes
+
+Chapter - Introduction
+
+When play begins:
+	say "You and your wife Saffi head to the Hogtooth Tavern for your usual date night. With the meal complete and cleared from your table, conversation drifts to the mundane as you finish your ale.";
+	say "(Please save a transcript! Type TRANSCRIPT to start, save to a .txt file, and see 'Contact the author' in the HELP menu for how to send it to me. This helps a lot in debugging and developing the game.)"
+
+Chapter - Endings
+
+To end in death:
+	say "It's a shame things had to end this way.";
+	end the story finally.
+
+To end in victory:
+	calculate bonus points;
+	end the story finally.
 
 Chapter - Time
 
