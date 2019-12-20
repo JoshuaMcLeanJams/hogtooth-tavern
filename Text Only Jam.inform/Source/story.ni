@@ -1,4 +1,4 @@
-"Text Only Jam" by Joshua McLean
+"Hogtooth Tavern" by Joshua McLean
 
 [Include Dynamic Rooms by Aaron Reed.]
 [Include Disappearing Doors by Andrew Plotkin.]
@@ -56,7 +56,7 @@ Include Commonly Unimplemented by Aaron Reed.
 Include Numbered Disambiguation Choices by Aaron Reed.
 Include Response Assistant by Aaron Reed.
 Include Small Kindnesses by Aaron Reed.
-Include Approaches by Emily Short.
+[Include Approaches by Emily Short.]
 Include Title Page by Jon Ingold.
 Include Reversed Persuasion Correction by Juhana Leinonen.
 
@@ -111,9 +111,9 @@ Score	Rank
 
 Part - Bibliography etc
 
-Release along with [cover art ("The dark wizard Baldorf"), ]a solution, an interpreter, the source text, the library card, the introductory booklet, the introductory postcard, and a file of "Changelog" called "changelog.md".
+Release along with [cover art ("The dark wizard Baldorf"), ]a solution, an interpreter, the source text, the library card, the introductory booklet, the introductory postcard[, and a file of "Changelog" called "changelog.md"].
 
-The story headline is "TODO Headline". The story genre is "Fantasy". The story creation year is 2018. The story description is "TODO description." The release number is 3.
+The story headline is "An unfinished proof of concept for 8 Bits to Infinity Text Only Jam". The story genre is "Fantasy". The story creation year is 2018. The story description is "You're in a tavern and bad things happen, but then it gets worse as less and less is implemented." The release number is 0.
 
 When play begins:
 	choose row 1 in Table of Basic Help Options;
@@ -482,7 +482,7 @@ A scenery desk called the bar is here.
 
 Chapter - The Cloakroom
 
-The Cloakroom is west of the Main Hall.
+The Cloakroom is west of the Main Hall. "A room for hanging coats. The main hall of the tavern lies to the east, while a door south exits to the streets."
 
 A door called the entry door is south of the cloakroom. The thought is "The night has only just begun! Why think of leaving?" The Saffi-thought is "'Did you want to leave? Seems a bit early.'"
 
@@ -490,11 +490,11 @@ Instead of opening the entry door, say "You'd best not."
 
 Chapter - The Kitchen
 
-The Kitchen is north of the kitchen door.
+The Kitchen is north of the kitchen door. "An ordinary, nondescript tavern kitchen. A door in the south wall leads back to the main hall. There's also a trap door set in the floor."
 
 A door called the kitchen door is north of the main hall and south of the kitchen. "A wooden door [if closed]is [end if]set [if the player is in the kitchen]in the southern wall[otherwise if the player is in the main hall]behind the bar[end if][if open] lies open[end if]."
 
-A door called the trapdoor is down from the kitchen.
+A door called the trapdoor is down from the kitchen. "A trapdoor here probably leads down to the wine cellar."
 
 After going north to the kitchen:
 	say "You go around the bar into the kitchen.";
@@ -502,7 +502,7 @@ After going north to the kitchen:
 	
 Chapter - The Cellar
 
-The Cellar is down from the trapdoor.
+The Cellar is down from the trapdoor. "A wine cellar. There's a passage heading south for some reason."
 
 Book - Main Game (The Dungeon)
 
@@ -513,7 +513,7 @@ The Portal Room is south from the cellar.
 A fixed in place container called the portal is here. "A glowing portal beckons you to enter."
 
 Instead of entering the portal for the first time:
-	say "It's quite possible this portal goes one way. Best be sure you have everything you need."
+	say "It's quite possible this portal goes one way. Best be sure you have everything you need, then try again."
 	
 Instead of entering the portal:
 	say "You step through the portal, blinded by its brightness before all fades to black. When your vision returns, you find yourself in...";
@@ -548,7 +548,7 @@ To explain the destiny:
 
 Chapter - Chapel
 
-The Chapel is north of the ruined courtyard.
+The Chapel is north of the ruined courtyard. "(This is where the final conflict was meant to take place. But you've reached the end of available content. Congratulations...? And thanks for playing! - Joshua McLean)"
 
 Volume - Characters
 
@@ -637,13 +637,24 @@ After saying goodbye to Saffi when the farewell type is implicit:
 
 Part - Subjects
 
-The hogtooth tavern is a Saffi-familiar subject. The thought is "Hogtooth has been your go-to tavern for decades. You appreciate the somewhat quieter clientele and the rotation of minstrels providing a variety of musical talent. The ale's not bad, either. And all of that makes up for the grumpy barkeep." The Saffi-thought is "'I like this place. It's warm and cozy, but not too cramped.' She's lucky she doesn't have to deal with the keeper."
+The hogtooth tavern is a Saffi-familiar subject. It is scenery. The thought is "Hogtooth has been your go-to tavern for decades. You appreciate the somewhat quieter clientele and the rotation of minstrels providing a variety of musical talent. The ale's not bad, either. And all of that makes up for the grumpy barkeep." The Saffi-thought is "'I like this place. It's warm and cozy, but not too cramped.' She's lucky she doesn't have to deal with the keeper."
 
-The dragon is a subject. Understand "dragons" as the dragon. The thought is "[if the dragon attack has happened]Massive beasts of scale and fire. Why are you thinking about them now?[otherwise]Probably some wizard's trick. Dragons are nothing more than legend." The Saffi-thought is "She laughs nervously. 'Nah, that wasn't a dragon. It was... something else. Dragons aren't real.'"
+The dragon is a subject in the main hall. It is scenery. Understand "dragons" as the dragon. The thought is "[if the dragon attack has happened]Massive beasts of scale and fire. Why are you thinking about them now?[otherwise]Probably some wizard's trick. Dragons are nothing more than legend." The Saffi-thought is "She laughs nervously. 'Nah, that wasn't a dragon. It was... something else. Dragons aren't real.'"
+
+[stupid hack because Inform thinks subjects need to be touchable to be thought about - TODO investigate]
+Every turn:
+	repeat with item running through subjects:
+		move the item to the location of the player.
 
 Book - The Barkeep
 
-A male shopkeeper called the barkeep is in the main hall. Understand "keeper", "barkeeper", and "bar keeper" as the barkeep. "A stout, round man with curly black hair peeking over the top of his doublet wipes down the bar with a rag.[if the mug is on the bar and the mug is unpaid] He's waiting for you to pay for your ale.[end if][if the mug is on the bar and the mug is paid] He's waiting for you to take your ale." The unknown-name is "barkeep".
+A male shopkeeper called the barkeep is in the main hall. Understand "keeper", "barkeeper", and "bar keeper" as the barkeep. "[the barkeep description]".
+
+To say the barkeep description:
+	If the dragon attack has happened:
+		say "The barkeep is huddled in the corner here, his hands over his head.";
+	otherwise:
+		say "A stout, round man with curly black hair peeking over the top of his doublet wipes down the bar with a rag.[if the mug is on the bar and the mug is unpaid] He's waiting for you to pay for your ale.[end if][if the mug is on the bar and the mug is paid] He's waiting for you to take your ale." The unknown-name is "barkeep".
 
 The thought is "He's a grumpy man with a short temper, but that's also why the atmosphere here is so nice. He won't allow any nonsense." The Saffi-thought is "'You always tell me he's in a mood, but I don't know. Maybe you just need to get to know him better.'"
 
@@ -651,7 +662,7 @@ Chapter - Buying Ale
 
 The mug is an unpaid purchasable liquid container. The coin value is 2. The shop owner is the barkeep. The liquid is "ale". Understand "drink", "ale", "beer", "beverage", and "booze" as the mug.
 Beverage is a familiar subject. Understand "drink", "mug", "ale", "beer", "booze" as beverage.
-Instead of quizzing the barkeep about a beverage:
+Instead of quizzing the barkeep about a beverage when the barkeep is in the main hall:
 	if the mug is on the bar and the mug is unpaid:
 		say "'Ey!' The barkeep points at the mug on the bar. 'Pay fer that one first, will ye?'";
 	otherwise:
@@ -685,11 +696,17 @@ Instead of quizzing the barkeep about something:
 Instead of telling the barkeep about something:
 	stop barkeep interruption instead.
 Instead of saying hello to the barkeep:
-	say "The barkeep looks at you expectantly.";
-	continue the action.
+	if the barkeep is in the main hall:
+		say "The barkeep looks at you expectantly.";
+		continue the action;
+	otherwise:
+		stop barkeep interruption instead.
 	
 To stop barkeep interruption:
-	say "'Don't care much fer talkin. Ye want a drink?'".
+	if the barkeep is in the main hall:
+		say "'Don't care much fer talkin. Ye want a drink?'";
+	otherwise:
+		say "He's too busy cowering in fear to talk to you."
 
 Chapter - Stop Entering the Bar
 
@@ -707,13 +724,13 @@ Before going north from the main hall when the barkeep is in the main hall:
 
 Book - The Minstrel
 
-A man called the Minstrel is in the main hall. "A man with shoulder-cropped blond hair strums on a lute and sings a wordless tune, filling the empty tavern air above the many conversations with beautiful music."
+A man called the Minstrel is in the main hall. Understand "man" and "bard" as the minstrel. "[if the minstrel is in the main hall]A man with shoulder-cropped blond hair strums on a lute and sings a wordless tune, filling the empty tavern air above the many conversations with beautiful music.[end if][if the minstrel is in the ruined courtyard]The minstrel is here, looking confused - and somewhat odd without an instrument.[end if]"
 
 The unknown-name is "minstrel".
 
-The description is "He appears to be enjoying himself immensely. You wonder whether he truly is, as most of the patrons ignore his hardworked talent in favor of their companions and ale."
+The description is "[if the minstrel is in the main hall]He appears to be enjoying himself immensely. You wonder whether he truly is, as most of the patrons ignore his hardworked talent in favor of their companions and ale. [otherwise]He looks odd without his lute."
 
-He carries an instrument called the lute.
+He carries an instrument called the lute. The description of the lute is "An egg-shaped body with several strings. You learned how to play from Sir Galien, who said a skill in music would translate to skill in combat."
 
 Instead of quizzing the minstrel about something:
 	stop minstrel interruption instead.
@@ -725,7 +742,10 @@ Instead of saying hello to the minstrel:
 	stop minstrel interruption instead.
 
 To stop minstrel interruption:
-	say "You wouldn't dare interrupt his beautiful music." instead.
+	if the minstrel is in the main hall:
+		say "You wouldn't dare interrupt his beautiful music." instead;
+	otherwise:
+		say "He ignores your words with blank eyes. Is he in some sort of daze?"
 
 Volume - Events and Scenes
 

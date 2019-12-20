@@ -2,30 +2,24 @@
 <ifindex version="1.0" xmlns="http://babel.ifarchive.org/protocol/iFiction/">
     <story>
         <identification>
-            <ifid>79E92258-9DAC-4058-8AE2-D897D3FE36A6</ifid>
+            <ifid>7E2436D8-4C83-4E41-AF21-FA1E7757FB3D</ifid>
             <format>zcode</format>
         </identification>
         <bibliographic>
-            <title>Text Only Jam</title>
+            <title>Hogtooth Tavern</title>
             <author>Joshua McLean</author>
-            <headline>TODO Headline</headline>
+            <headline>An unfinished proof of concept for 8 Bits to Infinity Text Only Jam</headline>
             <genre>Fantasy</genre>
             <firstpublished>2018</firstpublished>
-            <description>TODO description.</description>
+            <description>You're in a tavern and bad things happen, but then it gets worse as less and less is implemented.</description>
             <language>en</language>
             <group>Inform</group>
         </bibliographic>
-        <resources>
-            <auxiliary>
-                <leafname>changelog.md</leafname>
-                <description>Changelog</description>
-            </auxiliary>
-        </resources>
         <releases>
             <attached>
                 <release>
-                    <releasedate>2019-12-19</releasedate>
-                    <version>3</version>
+                    <releasedate>2019-12-20</releasedate>
+                    <version>0</version>
                     <compiler>Inform 7</compiler>
                     <compilerversion>6M62</compilerversion>
                 </release>
@@ -34,11 +28,11 @@
         <colophon>
             <generator>Inform 7</generator>
             <generatorversion>6M62</generatorversion>
-            <originated>2019-12-19</originated>
+            <originated>2019-12-20</originated>
         </colophon>
         <zcode>
-            <serial>191219</serial>
-            <release>3</release>
+            <serial>191220</serial>
+            <release>0</release>
             <compiler>Inform 7 build 6M62</compiler>
         </zcode>
     </story>
