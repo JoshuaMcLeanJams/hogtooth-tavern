@@ -461,7 +461,7 @@ Book - Introduction (The Tavern)
 
 Chapter - The Main Hall
 
-The Main Hall is a room. "This hall lit dimly by rows after row of candles along the walls features a large benched table to the south and several round tables with chairs in the center. Along the north wall runs a bar, and a passage west leads to the cloakroom and the tavern's exit."
+The Main Hall is a room. "This hall lit dimly by rows after row of candles along the walls features a large benched table to the south and several round tables with chairs in the center. Along the north wall runs a bar[if the dragon attack has happened]. The place is eerily silent following the dragon attack, the only sound a crinkle of embers from the hole where the cloakroom once was[otherwise], and a passage west leads to the cloakroom and the tavern's exit[end if]."
 
 [Furniture]
 
@@ -486,6 +486,9 @@ A scenery desk called the bar is here. The description is "The bar runs from the
 [Other Descriptive Items]
 
 A scenery thing called the candles are here. Understand "candle" as the candles. The description is "Dozens if not hundreds of candles in broken or misshapen mugs fight back the darkness with their flickering light." The thought is "The reuse of mugs for the candles is a clever trick, adding a unique decoration to the place. Probably saves on candle jars, too." The Saffi-thought is "'I don't know about them. The candlelight is nice, but those steel mugs just aren't aesthetic at all."
+
+Instead of going west from the main hall when the dragon attack has happened:
+	say "Chasing after the dragon doesn't sound like a fun night to you. There must be a safer place to escape... or hide."
 
 Chapter - The Cloakroom
 

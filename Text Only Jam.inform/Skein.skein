@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-86"/>
+  <activeNode nodeId="node-89"/>
   <item nodeId="node-1">
     <command xml:space="preserve">Text Only Jam</command>
     <result xml:space="preserve">You and your wife Saffi head to the Hogtooth Tavern for your usual date night. With the meal complete and cleared from your table, conversation drifts to the mundane as you finish your ale.&#x000A;(Please save a transcript! Type TRANSCRIPT to start, save to a .txt file, and see "Contact the author" in the HELP menu for how to send it to me. This helps a lot in debugging and developing the game.)&#x000A;&#x000A;Hogtooth Tavern&#x000A;An unfinished proof of concept for 8 Bits to Infinity Text Only Jam by Joshua McLean&#x000A;Release 0 / Serial number 191220 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Main Hall (on your chair)&#x000A;This hall lit dimly by rows after row of candles along the walls features a large benched table to the south and several round tables with chairs in the center. Along the north wall runs a bar, and a passage west leads to the cloakroom and the tavern's exit.&#x000A;&#x000A;A stout, round man with curly black hair peeking over the top of his shirt. He's wiping down the bar with a rag.&#x000A;&#x000A;&#x000A;A man with shoulder-cropped blond hair strums on a lute and sings a wordless tune, filling the empty tavern air above the many conversations with beautiful music.&#x000A;&#x000A;You can also see Saffi's chair (on which is Saffi) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">Hogtooth Tavern&#x000A;An unfinished proof of concept for 8 Bits to Infinity Text Only Jam by Joshua McLean&#x000A;Release 0 / Serial number 191220 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Main Hall (on your chair)&#x000A;This hall lit dimly by rows after row of candles along the walls features a large benched table to the south and several round tables with chairs in the center. Along the north wall runs a bar, and a passage west leads to the cloakroom and the tavern's exit.&#x000A;&#x000A;A stout, round man with curly black hair peeking over the top of his doublet wipes down the bar with a rag.&#x000A;&#x000A;&#x000A;A man with shoulder-cropped blond hair strums on a lute and sings a wordless tune, filling the empty tavern air above the many conversations with beautiful music.&#x000A;&#x000A;You can also see Saffi's chair (on which is Saffi) here.&#x000A;&#x000A;&gt;</commentary>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <children>
       <child nodeId="node-39"/>
       <child nodeId="node-71"/>
@@ -38,6 +38,7 @@
     <changed>NO</changed>
     <children>
       <child nodeId="node-42"/>
+      <child nodeId="node-87"/>
     </children>
   </item>
   <item nodeId="node-42">
@@ -296,6 +297,30 @@
   <item nodeId="node-70">
     <command xml:space="preserve">transcript</command>
     <result xml:space="preserve">Attempt to begin transcript failed.&#x000A;&#x000A;Thank you for enabling the transcript! This seven-day prototype is likely riddled with bugs and strange responses, and the hints may be a bit lacking.&#x000A;&#x000A;Please put an asterisk * before commands which you mean to be notes. For example, you might type:&#x000A;&#x000A;&gt; * I don't think this is the correct room description.&#x000A;&#x000A;Please mail the transcript file to joshua.mclean@8bitstoinfinity.com. I really appreciate the help. Every transcript will help make the game better!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-87">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Main Hall (on your chair)&#x000A;This hall lit dimly by rows after row of candles along the walls features a large benched table to the south and several round tables with chairs in the center. Along the north wall runs a bar. The place is eerily silent following the dragon attack, the only sound a crinkle of embers from the hole where the cloakroom once was.&#x000A;&#x000A;You can see the lute and Saffi's chair (on which is Saffi) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-88"/>
+    </children>
+  </item>
+  <item nodeId="node-88">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Chasing after the dragon doesn't sound like a fun night to you. There must be a safer place to escape... or hide.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-89"/>
+    </children>
+  </item>
+  <item nodeId="node-89">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Chasing after the dragon doesn't sound like a fun night to you. There must be a safer place to escape... or hide.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
