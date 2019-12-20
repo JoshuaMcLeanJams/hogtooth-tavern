@@ -200,12 +200,12 @@ Carry out being vulgar to:
 Chapter - Pondering
 
 The block thinking rule is not listed in any rulebook.
-Pondering is an action applying to nothing. Understand "ponder" and "think" as pondering.
+Pondering is an action applying to nothing. Understand "ponder" and "think" and "consider" as pondering.
 Carry out thinking: try pondering.
 Report pondering:
 	say "You stop and think for a moment, but nothing specific comes to mind. Maybe you need a HINT or to PONDER ABOUT something."
 
-Thinking about is an action applying to one object. Understand "ponder [something]" and "think about [something]" as thinking about.
+Thinking about is an action applying to one object. Understand "ponder [something]" and "think about [something]" and "consider [something]" as thinking about.
 Check thinking about something:
 	if the noun is unknown, say "[no thought]" instead.
 Report thinking about something:
@@ -252,7 +252,7 @@ An imp appears holding a metal circle with a pair of dials in the center. It rea
 
 In a flash, the imp disappears."
 	
-Xyzzy is a subject. Xyzzy is familiar. Understand "magic word" as xyzzy. The thought is "A magic word, but what could it mean?"
+Xyzzy is a subject. It is scenery. Understand "magic word" as xyzzy. The thought is "A magic word, but what could it mean?"
 
 Chapter - Importance
 
@@ -267,12 +267,15 @@ Chapter - Purchasing
 
 A thing called the coin purse is carried by the player. It has a number called the coin count. The coin count is 10. The description is "A small purse with [coin count] coins."
 
-The block buying rule is not listed in any rulebook.
-Check buying something:
-	say "Try asking about [the noun] instead."
-
 Paying to them is an action applying to one visible thing. Understand "pay [something]" as paying to them.
 Paying for it is an action applying to one visible thing. Understand "pay for [something]" as paying for it.
+
+The block buying rule is not listed in any rulebook.
+Check buying something:
+	[if the noun is visible:
+		try paying for the noun instead;
+	otherwise:]
+		try quizzing the shop owner of the noun about the noun instead.
 
 A shopkeeper is a kind of person. A shopkeeper has a number called the expected payment. A shopkeeper can be expecting pay. A shopkeeper is usually not expecting pay.
 
@@ -348,7 +351,7 @@ After dropping:
 
 Chapter - Liquids
 
-A liquid container is a kind of container. A liquid container can be empty or full. Every liquid container has some text called the liquid.
+A liquid container is a kind of thing. A liquid container can be empty or full. Every liquid container has some text called the liquid.
 
 After examining a liquid container:
 	if the noun is full:
@@ -648,29 +651,28 @@ Every turn:
 
 Book - The Barkeep
 
-A male shopkeeper called the barkeep is in the main hall. Understand "keeper", "barkeeper", and "bar keeper" as the barkeep. "[the barkeep description]".
-
+A male shopkeeper called the barkeep is in the main hall. Understand "keeper", "barkeeper", and "bar keeper" as the barkeep. "[the barkeep description]". The unknown-name is "barkeep".
 To say the barkeep description:
 	If the dragon attack has happened:
 		say "The barkeep is huddled in the corner here, his hands over his head.";
 	otherwise:
-		say "A stout, round man with curly black hair peeking over the top of his doublet wipes down the bar with a rag.[if the mug is on the bar and the mug is unpaid] He's waiting for you to pay for your ale.[end if][if the mug is on the bar and the mug is paid] He's waiting for you to take your ale." The unknown-name is "barkeep".
-
+		say "A stout, round man with curly black hair peeking over the top of his doublet [if the mug is not on the bar]wipes down the bar with a rag[otherwise if the mug is unpaid]waits for you to pay for your ale[otherwise] waits for you to take your ale[end if]."
 The thought is "He's a grumpy man with a short temper, but that's also why the atmosphere here is so nice. He won't allow any nonsense." The Saffi-thought is "'You always tell me he's in a mood, but I don't know. Maybe you just need to get to know him better.'"
 
 Chapter - Buying Ale
 
-The mug is an unpaid purchasable liquid container. The coin value is 2. The shop owner is the barkeep. The liquid is "ale". Understand "drink", "ale", "beer", "beverage", and "booze" as the mug.
-Beverage is a familiar subject. Understand "drink", "mug", "ale", "beer", "booze" as beverage.
-Instead of quizzing the barkeep about a beverage when the barkeep is in the main hall:
-	if the mug is on the bar and the mug is unpaid:
+The mug is an paid full purchasable liquid container carried by the player. The coin value is 2. The shop owner is the barkeep. The liquid is "ale". Understand "drink", "ale", "beer", "beverage", and "booze" as the mug.
+The description is "A metal flask with a handle for knocking it back. You prefer to savor the ale, though."
+The thought is "You're not much of a heavy drinker, but the ale from Hogtooth has a depth of flavor to keep you coming back."
+The Saffi-thought is "'Try not to have too many, dear.'"
+The mug count is a number that varies. The mug count is 0.
+Instead of quizzing the barkeep about the mug when the barkeep is in the main hall:
+	if the mug count is at least 2:
+		say "'I've think ye had enough for tonight.'";
+	otherwise if the mug is on the bar and the mug is unpaid:
 		say "'Ey!' The barkeep points at the mug on the bar. 'Pay fer that one first, will ye?'";
 	otherwise:
-		if the mug is nowhere:
-			say "The barkeep pulls a mug of ale and pounds it on the counter. 'Two copper,' he says.";
-			now the mug is on the bar;
-			now the mug is unpaid;
-		otherwise if the mug is carried by the player:
+		if the mug is carried by the player:
 			if the mug is full:
 				say "'How about ye finish that one first, lad?' He points at the full mug in your hand.";
 			otherwise:
@@ -701,7 +703,9 @@ Instead of saying hello to the barkeep:
 		continue the action;
 	otherwise:
 		stop barkeep interruption instead.
-	
+Instead of saying goodbye to the barkeep when the farewell type is implicit and the mug is unpaid:
+	say "'Ey!' the barkeep shouts after you. 'Don't think ye'll be leavin this unpaid.'"
+
 To stop barkeep interruption:
 	if the barkeep is in the main hall:
 		say "'Don't care much fer talkin. Ye want a drink?'";
@@ -724,23 +728,17 @@ Before going north from the main hall when the barkeep is in the main hall:
 
 Book - The Minstrel
 
-A man called the Minstrel is in the main hall. Understand "man" and "bard" as the minstrel. "[if the minstrel is in the main hall]A man with shoulder-cropped blond hair strums on a lute and sings a wordless tune, filling the empty tavern air above the many conversations with beautiful music.[end if][if the minstrel is in the ruined courtyard]The minstrel is here, looking confused - and somewhat odd without an instrument.[end if]"
-
+A man called the Minstrel is in the main hall. Understand "man" and "bard" as the minstrel. "[if the minstrel is in the main hall]A man with shoulder-cropped blond hair strums on a lute and sings a wordless tune, filling the empty tavern air above the many conversations with beautiful music[otherwise if the minstrel is in the ruined courtyard]The minstrel is here, looking confused - and somewhat odd without an instrument[end if]."
 The unknown-name is "minstrel".
-
 The description is "[if the minstrel is in the main hall]He appears to be enjoying himself immensely. You wonder whether he truly is, as most of the patrons ignore his hardworked talent in favor of their companions and ale. [otherwise]He looks odd without his lute."
-
 He carries an instrument called the lute. The description of the lute is "An egg-shaped body with several strings. You learned how to play from Sir Galien, who said a skill in music would translate to skill in combat."
 
 Instead of quizzing the minstrel about something:
 	stop minstrel interruption instead.
-	
 Instead of telling the minstrel about something:
 	stop minstrel interruption instead.
-	
 Instead of saying hello to the minstrel:
 	stop minstrel interruption instead.
-
 To stop minstrel interruption:
 	if the minstrel is in the main hall:
 		say "You wouldn't dare interrupt his beautiful music." instead;
@@ -752,7 +750,6 @@ Volume - Events and Scenes
 Chapter - Time
 
 When play begins, now seconds_per_turn is 30.
-
 After waiting:
 	take 150 secs; 
 	continue the action.
@@ -767,21 +764,17 @@ To decide whether it is daytime:
 Book - The Dragon Attack
 
 The dragon attack is a scene. The dragon attack begins when the time of day is after 6:24 PM.
-
 When the dragon attack begins:
 	now the dragon is Saffi-familiar;
 	if the player is in the cloakroom, run the cloakroom dragon attack;
 	otherwise run the main hall dragon attack.
-	
 To run the cloakroom dragon attack:
 	say "A deafening roar comes from outside. Worried for Saffi's safety, you dart back into the main hall.[paragraph break]";
 	now the player is in the main hall;
 	run the core dragon attack.
-
 To run the main hall dragon attack:
 	say "A deafening roar blasts through the cacaphony of voices and the minstrel's music, causing all to stop and fall silent. Seconds pass with patrons exchanging looks of fear and confusion.[paragraph break]";
 	run the core dragon attack.
-	
 To run the core dragon attack:
 	say "A column of fire blasts through the cloakroom and it's gone in an instant, now a pile of smoldering ash and sparks. The silence gives way to screams and panic as each person jumps from their seat.[paragraph break]";
 	say "Something massive and scaled zooms by the gaping hole into the streets where the cloakroom once was. A dragon? No, impossible.[paragraph break]";
